@@ -5,8 +5,11 @@ export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      backgroundImage: {
+        'chip-gradient': 'linear-gradient(180deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.00) 100%)'
+      },
       fontFamily: {
-        primary: ['Inter', ...defaultTheme.fontFamily.sans],
+        primary: ['Pretendard', 'Inter', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: {
@@ -24,6 +27,7 @@ export default {
           950: 'rgb(var(--tw-color-primary-950) / <alpha-value>)',
         },
         dark: '#222222',
+        orange: '#FF7B00',
       },
       keyframes: {
         flicker: {

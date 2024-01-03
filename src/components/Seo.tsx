@@ -3,12 +3,12 @@ import { useRouter } from 'next/router';
 
 // !STARTERCONF Change these default meta
 const defaultMeta = {
-  title: 'Next.js + Tailwind CSS + TypeScript Starter',
-  siteName: 'Next.js + Tailwind CSS + TypeScript Starter',
+  title: '서울대 멋쟁이사자처럼 홈페이지',
+  siteName: '서울대 멋쟁이사자처럼 홈페이지',
   description:
-    'A starter for Next.js, Tailwind CSS, and TypeScript with Absolute Import, Seo, Link component, pre-configured with Husky',
+    '서울대 멋쟁이사자처럼 홈페이지입니다.',
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
-  url: 'https://tsnext-tw.thcl.dev',
+  url: 'https://snulion-web.vercel.app/',
   type: 'website',
   robots: 'follow, index',
   /**
