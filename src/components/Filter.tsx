@@ -1,4 +1,3 @@
-
 interface FilterProps {
   filterList: string[];
   currentFilterIndex: number;
@@ -6,16 +5,17 @@ interface FilterProps {
 }
 
 export default function Filter(props: FilterProps) {
-
   const { filterList, currentFilterIndex, setCurrentFilterIndex } = props;
 
   return (
-    <div className="flex flex-row gap-[22px]">
+    <div className='flex flex-row gap-[22px]'>
       {filterList.map((filter, index) => (
-        <button 
+        <button
           key={index}
-          className={`flex justify-center items-center w-[65px] h-[34px] border-white border rounded-[5px] text-[18px] font-semibold ${
-            index === currentFilterIndex ? "bg-white text-black" : "bg-chip-gradient text-white"
+          className={`flex h-[34px] min-w-[65px] items-center justify-center rounded-[5px] border border-white px-2.5 text-[18px] font-semibold ${
+            index === currentFilterIndex
+              ? 'bg-white text-black'
+              : 'bg-chip-gradient text-white'
           }`}
           onClick={() => setCurrentFilterIndex(index)}
         >
@@ -23,5 +23,5 @@ export default function Filter(props: FilterProps) {
         </button>
       ))}
     </div>
-  )
+  );
 }

@@ -1,0 +1,20 @@
+[
+  {
+    "imageSrc": "/images/gallery-example.png",
+    "type": "네트워킹",
+    "title": "2023 보라 메이커스데이",
+    "date": "2023.12"
+  },
+  {
+    "imageSrc": "/images/gallery-example.png",
+    "type": "친목행사",
+    "title": "2023 보라 메이커스데이",
+    "date": "2023.12"
+  },
+  {
+    "imageSrc": "/images/gallery-example.png",
+    "type": "세미나",
+    "title": "2023 보라 메이커스데이",
+    "date": "2023.12"
+  }
+]

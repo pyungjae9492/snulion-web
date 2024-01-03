@@ -1,7 +1,28 @@
 [
   {
-    "imageSrc": "/images/example-image.png",
+    "imageSrc": "/images/project-example.png",
     "year": 10,
+    "title": "취준준 for Programmers",
+    "description": "개발자를 꿈꾸는 사람들을 위해 개발자 커리어 관련 정보를 제공하는 웹사이트",
+    "link": ""
+  },
+  {
+    "imageSrc": "/images/project-example.png",
+    "year": 9,
+    "title": "취준준 for Programmers",
+    "description": "개발자를 꿈꾸는 사람들을 위해 개발자 커리어 관련 정보를 제공하는 웹사이트",
+    "link": ""
+  },
+  {
+    "imageSrc": "/images/project-example.png",
+    "year": 11,
+    "title": "취준준 for Programmers",
+    "description": "개발자를 꿈꾸는 사람들을 위해 개발자 커리어 관련 정보를 제공하는 웹사이트",
+    "link": ""
+  },
+  {
+    "imageSrc": "/images/project-example.png",
+    "year": 11,
     "title": "취준준 for Programmers",
     "description": "개발자를 꿈꾸는 사람들을 위해 개발자 커리어 관련 정보를 제공하는 웹사이트",
     "link": ""
