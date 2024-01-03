@@ -71,7 +71,8 @@ export default function PeoplePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 h-full">
             {filteredPeopleData.map((person, index) => {
               return (
-                <div 
+                <div
+                  key={"interview-card-wrapper-" + index}
                   className="w-fit h-fit"
                   onClick={() => onClickInterviewCard(person)}
                 >
