@@ -6,7 +6,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'chip-gradient': 'linear-gradient(180deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.00) 100%)'
+        'chip-gradient':
+          'linear-gradient(180deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.00) 100%)',
       },
       fontFamily: {
         primary: ['Pretendard', 'Inter', ...defaultTheme.fontFamily.sans],
@@ -28,6 +29,9 @@ export default {
         },
         dark: '#222222',
         orange: '#FF7B00',
+        blue: '#2E95F4',
+        green: '#00BB3F',
+        purple: '#BD68FF',
       },
       keyframes: {
         flicker: {

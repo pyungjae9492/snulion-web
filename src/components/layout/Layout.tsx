@@ -40,7 +40,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       }}
     >
       <header
-        className='sticky top-0 z-50 flex h-fit w-full flex-row items-center justify-between px-[60px] py-[27.5px]'
+        className={`${
+          currentPath === '/' ? 'fixed' : 'sticky'
+        } top-0 z-50 flex h-fit w-full flex-row items-center justify-between px-[60px] py-[27.5px]`}
         style={{
           background:
             'linear-gradient(180deg, rgba(0, 0, 0, 0.80) 0%, rgba(0, 0, 0, 0.00) 100%)',

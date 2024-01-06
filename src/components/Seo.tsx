@@ -5,8 +5,7 @@ import { useRouter } from 'next/router';
 const defaultMeta = {
   title: '서울대 멋쟁이사자처럼 홈페이지',
   siteName: '서울대 멋쟁이사자처럼 홈페이지',
-  description:
-    '서울대 멋쟁이사자처럼 홈페이지입니다.',
+  description: '서울대 멋쟁이사자처럼 홈페이지입니다.',
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
   url: 'https://snulion-web.vercel.app/',
   type: 'website',
