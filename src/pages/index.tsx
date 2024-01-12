@@ -10,6 +10,10 @@ import Marquee from 'react-fast-marquee';
 import { useRouter } from 'next/router';
 import SpeechBubble, { SpeechBubbleProps } from '@/components/SpeechBubble';
 import AccomplishmentCard from '@/components/cards/AccomplishmentCard';
+import ActivityCard, {
+  ActivityCardProps,
+} from '@/components/cards/ActivityCard';
+import BlinkingSvg from '@/components/BlinkingSvg';
 
 /**
  * SVGR Support
@@ -28,20 +32,30 @@ interface HomeSectionProps {
   titleClassName?: string;
   description?: string;
   children: React.ReactNode;
+  showBlinkComponent?: boolean;
 }
 
 const HomeSection = (props: HomeSectionProps) => {
-  const { title, titleClassName, description, children } = props;
+  const {
+    title,
+    titleClassName,
+    description,
+    children,
+    showBlinkComponent = true,
+  } = props;
   return (
-    <div className='flex flex-col items-center gap-[70px] overflow-hidden'>
+    <div className='flex w-full flex-col items-center gap-10 md:gap-[70px]'>
       <div className='flex flex-col items-center gap-10'>
+        {showBlinkComponent && <BlinkingSvg />}
         <p
-          className={`text-center text-[38px] font-bold leading-[32px] ${titleClassName}`}
+          className={`text-center text-[22px] font-bold leading-[32px] md:text-[38px] ${titleClassName}`}
         >
           {title}
         </p>
         {description && (
-          <p className={`text-center text-[18px] font-semibold leading-normal`}>
+          <p
+            className={`text-center text-[13px] font-semibold leading-normal md:text-[18px]`}
+          >
             {description}
           </p>
         )}
@@ -78,41 +92,68 @@ const mainReviews: SpeechBubbleProps[] = [
   },
 ];
 
+const activities: ActivityCardProps[] = [
+  {
+    index: 1,
+    title: '정기 세미나',
+    tags: ['1, 2학기', '토 14~18시'],
+    description:
+      '기초부터 실전까지 웹 개발을 배워요.\n알찬 자료와 실습 중심의 세미나로\n프론트엔드와 백엔드 개발을 모두 경험할 수 있어요.',
+    imageSrc: '/images/activity-example.png',
+    link: '/about?section=curriculum',
+    linkTitle: '커리큘럼 보기',
+  },
+];
+
 export default function HomePage() {
   const router = useRouter();
 
   return (
     <Layout>
       <Seo templateTitle='Home' />
-      <main>
+      <main className='max-md:px-8'>
         <section className='relative flex h-dvh w-full flex-col items-center justify-center gap-10'>
           <div className='flex flex-col items-center gap-5'>
-            <Image
-              src='/images/header-logo.png'
-              alt='main-logo'
-              width={235}
-              height={30}
-            />
-            <p className='text-center text-[58px] font-bold leading-normal'>
+            <div className='relative h-[22px] w-[192px] md:h-[30px] md:w-[260px]'>
+              <Image src='/images/main-logo.png' alt='main-logo' fill />
+            </div>
+            <p className='text-center text-[30px] font-bold leading-normal md:text-[58px]'>
               {'기술적 장벽을 허물고\n아이디어를 실현하는 사람들'}
             </p>
           </div>
-          <Button backgroundColor='orange'>12기 지원하기</Button>
+          <Button className='hidden md:block' backgroundColor='orange'>
+            <span>12기 지원하기</span>
+          </Button>
           <p className='text-center text-[18px] font-semibold leading-normal'>
             {'지원 기간: 2021.08.30(월) ~ 2021.09.12(일)'}
           </p>
+          <Button
+            className='relative max-md:mt-[150px] max-md:w-full max-md:max-w-[450px] md:hidden'
+            backgroundColor='orange'
+          >
+            <Image
+              className='absolute top-[-116px] hidden max-md:block'
+              src='/images/main-lion.png'
+              alt='main-apply-btn'
+              width={200}
+              height={200}
+            />
+            <span>12기 지원하기</span>
+          </Button>
           <Image
-            className='relative top-11'
+            className='relative top-11 hidden md:block'
             src='/images/main-scroll-btn.png'
             alt='main-image'
             width={60}
             height={60}
           />
         </section>
-        <section className='mt-14 flex flex-col gap-[240px]'>
+        <section className='mt-14 flex flex-col items-center gap-[120px] md:gap-[240px]'>
           <HomeSection title='ABOUT US' description='우리는 누구인가요?'>
-            <div className='flex gap-10'>
-              <AccomplishmentCard title='Since' number={2013} />
+            <div className='flex w-full flex-col justify-center gap-3 md:flex-row md:gap-10'>
+              <AccomplishmentCard title='Since' value={'2013'} />
+              <AccomplishmentCard title='People' value={'220+'} />
+              <AccomplishmentCard title='Projects' value={'50+'} />
             </div>
           </HomeSection>
           <HomeSection
@@ -121,7 +162,18 @@ export default function HomePage() {
               '주요 활동을 설명하는 내용\n멋사 활동만 잘 따라와도 머찐 웹 개발자로  성장할 수 있다~'
             }
           >
-            <></>
+            {activities.map((activity, index) => (
+              <ActivityCard
+                key={index}
+                index={activity.index}
+                title={activity.title}
+                tags={activity.tags}
+                description={activity.description}
+                imageSrc={activity.imageSrc}
+                link={activity.link}
+                linkTitle={activity.linkTitle}
+              />
+            ))}
           </HomeSection>
           <HomeSection
             title='PROJECTS'
@@ -149,7 +201,7 @@ export default function HomePage() {
             </Button>
           </HomeSection>
           <HomeSection title='REVIEWS'>
-            <div className='flex max-w-[500px] flex-col items-center gap-[60px]'>
+            <div className='flex w-full max-w-[500px] flex-col items-center gap-[60px]'>
               {mainReviews.map((review, index) => (
                 <div key={'main-speech-bubble-' + index}>
                   <SpeechBubble
@@ -178,7 +230,8 @@ export default function HomePage() {
           </HomeSection>
           <HomeSection
             title={'멋사와 함께 성장할\n열정있는 12기 아기사자를 기다립니다!'}
-            titleClassName='leading-[62px]'
+            titleClassName='leading-normal'
+            showBlinkComponent={false}
           >
             <Button
               backgroundColor='orange'
@@ -189,19 +242,23 @@ export default function HomePage() {
             </Button>
           </HomeSection>
           <HomeSection title='SPONSORED BY'>
-            <div className='flex h-[63px] flex-row gap-[54px]'>
-              <Image
-                src='/images/main-springcamp-logo.png'
-                alt='sponsor-1'
-                width={200}
-                height={50}
-              />
-              <Image
-                src='/images/main-channel-talk-logo.png'
-                alt='sponsor-1'
-                width={200}
-                height={63}
-              />
+            <div className='flex flex-row gap-10 md:gap-[54px]'>
+              <div className='relative h-[31px] w-[127px] md:h-[63px] md:w-[200px]'>
+                <Image
+                  src='/images/main-springcamp-logo.png'
+                  alt='sponsor-1'
+                  width={200}
+                  height={50}
+                />
+              </div>
+              <div className='relative h-[39px] w-[122px] md:h-[63px] md:w-[200px]'>
+                <Image
+                  src='/images/main-channel-talk-logo.png'
+                  alt='sponsor-1'
+                  width={200}
+                  height={63}
+                />
+              </div>
             </div>
             <Button
               backgroundColor='chip-gradient'

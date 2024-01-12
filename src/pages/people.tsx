@@ -60,7 +60,9 @@ export default function PeoplePage() {
         <InterviewDetail {...selectedPersonData!} />
       ) : (
         <section className='mt-20 flex h-fit w-full flex-col items-center gap-[60px]'>
-          <p className='text-[46px] font-bold leading-normal'>운영진 인터뷰</p>
+          <p className='text-[32px] font-bold leading-normal md:text-[46px]'>
+            운영진 인터뷰
+          </p>
           <Filter
             filterList={peopleTabs}
             currentFilterIndex={currentFilterIndex}

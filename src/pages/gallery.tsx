@@ -27,8 +27,10 @@ export default function PeoplePage() {
   return (
     <Layout>
       <Seo templateTitle='Project' />
-      <section className='mt-20 flex h-fit w-full flex-col items-center gap-[60px]'>
-        <p className='text-[46px] font-bold leading-normal'>갤러리</p>
+      <section className='mt-20 flex h-fit w-full flex-col items-center gap-[60px] overflow-hidden'>
+        <p className='text-[32px] font-bold leading-normal md:text-[46px]'>
+          갤러리
+        </p>
         <Filter
           filterList={galleryTabs}
           currentFilterIndex={currentFilterIndex}

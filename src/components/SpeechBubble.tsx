@@ -19,8 +19,17 @@ export default function SpeechBubble(props: SpeechBubbleProps) {
       <div
         className={
           `rounded-[30px] px-7 py-5 ${
-            type === 'left' ? 'rounded-bl-none' : 'rounded-br-none'
-          } bg-${color} ` + className
+            color === 'orange'
+              ? 'bg-orange'
+              : color === 'blue'
+              ? 'bg-blue'
+              : color === 'green'
+              ? 'bg-green'
+              : color === 'purple'
+              ? 'bg-purple'
+              : color === 'white' && 'bg-white'
+          } ${type === 'left' ? 'rounded-bl-none' : 'rounded-br-none'} ` +
+          className
         }
       >
         <HighlightText

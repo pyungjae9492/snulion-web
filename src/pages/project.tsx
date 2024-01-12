@@ -28,7 +28,9 @@ export default function PeoplePage() {
     <Layout>
       <Seo templateTitle='Project' />
       <section className='mt-20 flex h-fit w-full flex-col items-center gap-[60px]'>
-        <p className='text-[46px] font-bold leading-normal'>프로젝트</p>
+        <p className='text-[32px] font-bold leading-normal md:text-[46px]'>
+          프로젝트
+        </p>
         <Filter
           filterList={projectTabs}
           currentFilterIndex={currentFilterIndex}

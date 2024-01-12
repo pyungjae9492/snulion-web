@@ -16,7 +16,7 @@ export default function Tag(props: TagProps) {
             : color === 'white'
             ? 'bg-white text-black'
             : 'bg-chip-gradient border border-white text-white'
-        } rounded-[20px] text-base font-semibold ` + className
+        } rounded-[20px] text-[13px] font-semibold md:text-base ` + className
       }
     >
       {content}
