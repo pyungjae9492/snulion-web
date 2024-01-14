@@ -51,7 +51,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     >
       <header
         className={`${
-          currentPath === '/' ? 'fixed' : 'sticky'
+          currentPath === '/' || currentPath === '/about' ? 'fixed' : 'sticky'
         } top-0 z-50 flex h-fit w-full flex-row items-center justify-between px-5 py-6 md:px-[60px] md:py-[27.5px]`}
         style={{
           background:

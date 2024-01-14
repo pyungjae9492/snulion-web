@@ -13,7 +13,13 @@ import AccomplishmentCard from '@/components/cards/AccomplishmentCard';
 import ActivityCard, {
   ActivityCardProps,
 } from '@/components/cards/ActivityCard';
-import BlinkingSvg from '@/components/BlinkingSvg';
+import Section from '@/components/sections/Section';
+import RecruitTimeline, {
+  RecruitTimelineItem,
+} from '@/components/RecruitTimeline';
+import SponsorSection from '@/components/sections/SponsorSection';
+import activityData from '@/data/activity.json';
+import ApplyCTASection from '@/components/sections/ApplyCTASection';
 
 /**
  * SVGR Support
@@ -27,81 +33,30 @@ import BlinkingSvg from '@/components/BlinkingSvg';
 // Before you begin editing, follow all comments with `STARTERCONF`,
 // to customize the default configuration.
 
-interface HomeSectionProps {
-  title: string;
-  titleClassName?: string;
-  description?: string;
-  children: React.ReactNode;
-  showBlinkComponent?: boolean;
-}
-
-const HomeSection = (props: HomeSectionProps) => {
-  const {
-    title,
-    titleClassName,
-    description,
-    children,
-    showBlinkComponent = true,
-  } = props;
-  return (
-    <div className='flex w-full flex-col items-center gap-10 md:gap-[70px]'>
-      <div className='flex flex-col items-center gap-10'>
-        {showBlinkComponent && <BlinkingSvg />}
-        <p
-          className={`text-center text-[22px] font-bold leading-[32px] md:text-[38px] ${titleClassName}`}
-        >
-          {title}
-        </p>
-        {description && (
-          <p
-            className={`text-center text-[13px] font-semibold leading-normal md:text-[18px]`}
-          >
-            {description}
-          </p>
-        )}
-      </div>
-      {children}
-    </div>
-  );
-};
-
 const mainReviews: SpeechBubbleProps[] = [
   {
     color: 'orange',
     content:
-      '세미나 퀄리티에 너무 만족했어요! 자료도 너무 좋았구 다들 하나부터 친절하게 설명해주셔서 얻어가는 부분이 굉장히 많았습니다 :)',
+      '#세미나 퀄리티에 너무 만족했어요!# 자료도 너무 좋았고, 하나부터 친절하게 설명해주셔서 얻어가는 부분이 굉장히 많았습니다 :)',
     type: 'left',
   },
   {
     color: 'blue',
     content:
-      '코딩데이 때 배운 것을 직접 적용해보는 과정에서 상당히 얻어가는 게 많다고 느꼈어요.',
+      '코딩데이 때 #배운 것을 직접 적용해보는 과정#에서 상당히 얻어가는 게 많다고 느꼈어요.',
     type: 'right',
   },
   {
     color: 'green',
     content:
-      '오피스투어 때 현직자 분들과 이야기를 나눌 수 있어 좋았습니다! 또한 고려대 멋사 분들과 여러 활동을 함께하며 보다 넓은 시각을 가지게 된 것 같아요!',
+      '오피스투어 때 #현직자 분들과 이야기를 나눌 수 있어 좋았습니다!# 또한 고려대 멋사 분들과 여러 활동을 함께하며 보다 #넓은 시각을 가지게 된 것 같아요!#',
     type: 'left',
   },
   {
     color: 'purple',
     content:
-      '아이디어를 직접 내고 실제 서비스로 구현해내는 과정이 다른 어떤 곳에서도 쉽게 경험할 수 없는 것이라 굉장히 소중하고 의미 있게 다가왔어요.',
+      '아이디어를 직접 내고 실제 서비스로 구현해내는 과정이 #다른 어떤 곳에서도 쉽게 경험할 수 없는 것#이라 굉장히 소중하고 의미 있게 다가왔어요.',
     type: 'right',
-  },
-];
-
-const activities: ActivityCardProps[] = [
-  {
-    index: 1,
-    title: '정기 세미나',
-    tags: ['1, 2학기', '토 14~18시'],
-    description:
-      '기초부터 실전까지 웹 개발을 배워요.\n알찬 자료와 실습 중심의 세미나로\n프론트엔드와 백엔드 개발을 모두 경험할 수 있어요.',
-    imageSrc: '/images/activity-example.png',
-    link: '/about?section=curriculum',
-    linkTitle: '커리큘럼 보기',
   },
 ];
 
@@ -125,7 +80,9 @@ export default function HomePage() {
             <span>12기 지원하기</span>
           </Button>
           <p className='text-center text-[18px] font-semibold leading-normal'>
-            {'지원 기간: 2021.08.30(월) ~ 2021.09.12(일)'}
+            {
+              '서울대학교 멋쟁이 사자처럼은\n아이디어를 현실로 만드는 웹 프로그래밍 동아리입니다.'
+            }
           </p>
           <Button
             className='relative max-md:mt-[150px] max-md:w-full max-md:max-w-[450px] md:hidden'
@@ -149,24 +106,44 @@ export default function HomePage() {
           />
         </section>
         <section className='mt-14 flex flex-col items-center gap-[120px] md:gap-[240px]'>
-          <HomeSection title='ABOUT US' description='우리는 누구인가요?'>
-            <div className='flex w-full flex-col justify-center gap-3 md:flex-row md:gap-10'>
+          <Section
+            title='ABOUT US'
+            description={
+              '2013년 창립된 이래 총 11기의 멋사인들이 거쳐간\n 서울대학교 멋쟁이사자처럼은 수많은 아이디어가 탄생한 성장의 발판입니다.'
+            }
+          >
+            <div className='relative flex w-full flex-col justify-center gap-3 md:w-fit md:flex-row md:gap-10'>
+              <Image
+                className='absolute left-0 top-[-116px] max-md:hidden'
+                src='/images/main-lion.png'
+                alt='main-apply-btn'
+                width={200}
+                height={200}
+              />
               <AccomplishmentCard title='Since' value={'2013'} />
               <AccomplishmentCard title='People' value={'220+'} />
               <AccomplishmentCard title='Projects' value={'50+'} />
+              <Image
+                className='absolute right-[-70px] top-[116px] max-md:hidden'
+                src='/images/main-lion-labtop.png'
+                alt='main-apply-btn'
+                width={200}
+                height={200}
+              />
             </div>
-          </HomeSection>
-          <HomeSection
+          </Section>
+          <Section
             title='ACTIVITIES'
             description={
-              '주요 활동을 설명하는 내용\n멋사 활동만 잘 따라와도 머찐 웹 개발자로  성장할 수 있다~'
+              '1년 간의 교육 과정을 통해 누구나 자신의 아이디어를\n웹 서비스로 구현할 수 있는 능력을 갖추게 됩니다'
             }
           >
-            {activities.map((activity, index) => (
+            {activityData.map((activity, index) => (
               <ActivityCard
                 key={index}
                 index={activity.index}
                 title={activity.title}
+                //@ts-ignore
                 tags={activity.tags}
                 description={activity.description}
                 imageSrc={activity.imageSrc}
@@ -174,33 +151,35 @@ export default function HomePage() {
                 linkTitle={activity.linkTitle}
               />
             ))}
-          </HomeSection>
-          <HomeSection
+          </Section>
+          <Section
             title='PROJECTS'
             description='해커톤에서 탄생한 프로젝트를 소개합니다'
           >
-            <Marquee speed={75}>
-              <div className='mr-[25px] flex w-full flex-row gap-[25px] overflow-auto'>
-                {projectData.map((project, index) => (
-                  <ProjectCard
-                    key={index}
-                    imageSrc={project.imageSrc}
-                    title={project.title}
-                    description={project.description}
-                    year={project.year}
-                    link={project.link}
-                  />
-                ))}
-              </div>
-            </Marquee>
+            <div className='w-[100vw]'>
+              <Marquee speed={75}>
+                <div className='mr-[25px] flex w-full flex-row gap-[25px] overflow-auto'>
+                  {projectData.map((project, index) => (
+                    <ProjectCard
+                      key={index}
+                      imageSrc={project.imageSrc}
+                      title={project.title}
+                      description={project.description}
+                      year={project.year}
+                      link={project.link}
+                    />
+                  ))}
+                </div>
+              </Marquee>
+            </div>
             <Button
               backgroundColor='chip-gradient'
               onClick={() => router.push('/project')}
             >
               더 많은 프로젝트 보기
             </Button>
-          </HomeSection>
-          <HomeSection title='REVIEWS'>
+          </Section>
+          <Section title='REVIEWS'>
             <div className='flex w-full max-w-[500px] flex-col items-center gap-[60px]'>
               {mainReviews.map((review, index) => (
                 <div key={'main-speech-bubble-' + index}>
@@ -219,55 +198,18 @@ export default function HomePage() {
             >
               운영진 인터뷰 보기
             </Button>
-          </HomeSection>
-          <HomeSection title='RECRUIT'>
+          </Section>
+          <Section title='RECRUIT'>
+            <RecruitTimeline />
             <Button
               backgroundColor='chip-gradient'
               onClick={() => router.push('/apply')}
             >
               모집 공고 보기
             </Button>
-          </HomeSection>
-          <HomeSection
-            title={'멋사와 함께 성장할\n열정있는 12기 아기사자를 기다립니다!'}
-            titleClassName='leading-normal'
-            showBlinkComponent={false}
-          >
-            <Button
-              backgroundColor='orange'
-              // TODO: Change to 구글폼 link
-              // onClick={() => router.push('/apply')}
-            >
-              12기 지원하기
-            </Button>
-          </HomeSection>
-          <HomeSection title='SPONSORED BY'>
-            <div className='flex flex-row gap-10 md:gap-[54px]'>
-              <div className='relative h-[31px] w-[127px] md:h-[63px] md:w-[200px]'>
-                <Image
-                  src='/images/main-springcamp-logo.png'
-                  alt='sponsor-1'
-                  width={200}
-                  height={50}
-                />
-              </div>
-              <div className='relative h-[39px] w-[122px] md:h-[63px] md:w-[200px]'>
-                <Image
-                  src='/images/main-channel-talk-logo.png'
-                  alt='sponsor-1'
-                  width={200}
-                  height={63}
-                />
-              </div>
-            </div>
-            <Button
-              backgroundColor='chip-gradient'
-              // TODO: Change to 구글폼 link
-              // onClick={() => router.push('/apply')}
-            >
-              후원 문의
-            </Button>
-          </HomeSection>
+          </Section>
+          <ApplyCTASection />
+          <SponsorSection />
         </section>
       </main>
     </Layout>

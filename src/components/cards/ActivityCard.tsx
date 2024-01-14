@@ -1,12 +1,12 @@
 import Button from '@/components/Button';
-import Tag from '@/components/Tag';
+import Tag, { TagProps } from '@/components/Tag';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 export interface ActivityCardProps {
   index: number;
   title: string;
-  tags: string[];
+  tags: TagProps[];
   description: string;
   imageSrc: string;
   link?: string;
@@ -19,7 +19,11 @@ export default function ActivityCard(props: ActivityCardProps) {
   const router = useRouter();
 
   return (
-    <div className='flex flex-col-reverse items-center justify-center gap-4 rounded-[10px] bg-white bg-opacity-10 p-0 max-md:w-full md:flex-row md:gap-20 md:rounded-[30px] md:px-[90px] md:py-[50px]'>
+    <div
+      className={`flex flex-col-reverse ${
+        index % 2 === 1 ? 'md:flex-row' : 'md:flex-row-reverse'
+      } max-w-[1000px] items-start justify-center gap-4 rounded-[10px] bg-white bg-opacity-10 p-0 max-md:w-full md:gap-20 md:rounded-[30px] md:px-[90px] md:py-[50px]`}
+    >
       <div className='flex flex-col items-start justify-start gap-5 px-6 pb-9 pt-4 max-md:w-full md:gap-[30px] md:p-0'>
         <div className='flex flex-col gap-[15px] md:gap-5'>
           <div className='flex flex-col gap-1'>
@@ -32,7 +36,7 @@ export default function ActivityCard(props: ActivityCardProps) {
           </div>
           <div className='flex gap-2.5 md:gap-[15px]'>
             {tags.map((tag, index) => (
-              <Tag key={index} color='orange' content={tag} />
+              <Tag key={index} color={tag.color} content={tag.content} />
             ))}
           </div>
           <p className='text-[13px] font-semibold leading-relaxed md:text-lg'>
@@ -49,7 +53,7 @@ export default function ActivityCard(props: ActivityCardProps) {
           </Button>
         )}
       </div>
-      <div className='relative h-[190px] w-full md:h-[340px] md:w-[370px]'>
+      <div className='relative h-[190px] w-full shrink-0 md:h-[340px] md:w-[370px]'>
         <Image
           className='rounded-b-none rounded-t-[10px] md:rounded-[10px]'
           src={imageSrc}

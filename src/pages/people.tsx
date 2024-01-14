@@ -2,12 +2,12 @@ import Filter from '@/components/Filter';
 import Seo from '@/components/Seo';
 import InterviewCard from '@/components/cards/InterviewCard';
 import Layout from '@/components/layout/Layout';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import peopleDataListJSON from '@/data/people.json';
 import InterviewDetail from '@/components/InterviewDetail';
 import { useRouter } from 'next/router';
 
-const peopleTabs = ['전체', '11기', '10기', '9기'];
+const peopleTabs = ['전체', '12기', '11기', '10기'];
 
 type PeopleData = {
   id: number;
@@ -38,8 +38,10 @@ export default function PeoplePage() {
       setFilteredPeopleData(peopleDataList);
     } else {
       setFilteredPeopleData(
-        peopleDataList.filter(
-          (person) => person.year === 12 - currentFilterIndex
+        peopleDataList.filter((person) =>
+          Array.isArray(person.year)
+            ? person.year.includes(13 - currentFilterIndex)
+            : person.year === 13 - currentFilterIndex
         )
       );
     }
@@ -47,15 +49,19 @@ export default function PeoplePage() {
 
   const onClickInterviewCard = (person: PeopleData) => {
     if (peopleDataList.map((person) => person.id).includes(person.id)) {
+      scrollRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       router.push(`/people?id=${person.id}`, undefined, { shallow: true });
     } else {
       alert('존재하지 않는 인터뷰입니다.');
     }
   };
 
+  const scrollRef = useRef<HTMLDivElement>(null);
+
   return (
     <Layout>
       <Seo templateTitle='People' />
+      <div ref={scrollRef} className='h-1 w-full' />
       {selectedPersonId ? (
         <InterviewDetail {...selectedPersonData!} />
       ) : (
@@ -80,7 +86,11 @@ export default function PeoplePage() {
                     key={'interview-card-' + index}
                     imageSrc={person.imageSrc}
                     name={person.name}
-                    year={person.year}
+                    year={
+                      currentFilterIndex === 0
+                        ? person.year
+                        : 13 - currentFilterIndex
+                    }
                     title={person.title}
                     content={person.content}
                   />

@@ -33,7 +33,7 @@ export default function SpeechBubble(props: SpeechBubbleProps) {
         }
       >
         <HighlightText
-          className={`text-lg font-normal leading-normal ${
+          textClassName={`text-lg font-normal leading-normal ${
             color === 'white' && 'text-black'
           }`}
           text={content}

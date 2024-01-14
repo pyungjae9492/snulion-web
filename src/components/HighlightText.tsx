@@ -1,10 +1,11 @@
 interface HighlightTextProps {
-  className?: string;
+  containerClassName?: string;
+  textClassName?: string;
   text: string;
 }
 
 export default function HighlightText(props: HighlightTextProps) {
-  const { className, text } = props;
+  const { containerClassName, textClassName, text } = props;
   // 달러 표시 또는 샵 표시로 감싼 부분을 식별하는 정규식
   const regex = /(\$.*?\$)|(#.*?#)/g;
 
@@ -12,13 +13,13 @@ export default function HighlightText(props: HighlightTextProps) {
   const parts = text.split(regex).filter((part) => part);
 
   return (
-    <span className={className}>
+    <p className={containerClassName + ' ' + textClassName}>
       {parts.map((part, index) => {
         if (part.startsWith('$') && part.endsWith('$')) {
           // 달러 표시로 감싼 부분을 강조 (볼드 처리)
           return (
             <span
-              className={className}
+              className={textClassName}
               style={{ fontWeight: 'bold' }}
               key={index}
             >
@@ -29,7 +30,7 @@ export default function HighlightText(props: HighlightTextProps) {
           // 샵 표시로 감싼 부분에 밑줄 처리
           return (
             <u
-              className={className}
+              className={textClassName}
               style={{ textDecoration: 'underline' }}
               key={index}
             >
@@ -39,6 +40,6 @@ export default function HighlightText(props: HighlightTextProps) {
         }
         return part; // 나머지 텍스트 부분
       })}
-    </span>
+    </p>
   );
 }
