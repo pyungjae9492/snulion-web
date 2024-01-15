@@ -23,7 +23,7 @@ export default function ProjectCard(props: InterviewCardProps) {
     >
       <div className='flex h-full w-full flex-col gap-[22px]'>
         <div className='relative h-[220px] w-[300px]'>
-          <Image src={imageSrc} alt='interview-card-image' fill />
+          <Image src={imageSrc} alt='interview-card-image' fill priority />
         </div>
         <div className='flex flex-row justify-between'>
           <p className='text-lg font-bold'>{title}</p>

@@ -28,6 +28,7 @@ export default function InterviewCard(props: InterviewCardProps) {
             alt='interview-card-image'
             fill
             objectFit='cover'
+            priority
           />
         </div>
         <div className='flex flex-col items-start gap-2.5'>

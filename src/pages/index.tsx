@@ -78,7 +78,12 @@ export default function HomePage() {
         <section className='relative flex h-dvh w-full flex-col items-center justify-center gap-10'>
           <div className='flex flex-col items-center gap-5'>
             <div className='relative h-[22px] w-[192px] md:h-[30px] md:w-[260px]'>
-              <Image src='/images/main-logo.png' alt='main-logo' fill />
+              <Image
+                src='/images/main-logo.png'
+                alt='main-logo'
+                fill
+                priority
+              />
             </div>
             <p className='text-center text-[30px] font-bold leading-normal md:text-[58px]'>
               {'기술적 장벽을 허물고\n아이디어를 실현하는 사람들'}
@@ -117,6 +122,7 @@ export default function HomePage() {
               alt='main-apply-btn'
               width={200}
               height={200}
+              priority
             />
             <span>12기 지원하기</span>
           </Button>
@@ -126,6 +132,7 @@ export default function HomePage() {
             alt='main-image'
             width={60}
             height={60}
+            priority
           />
         </section>
         <section className='mt-14 flex flex-col items-center gap-[120px] md:gap-[240px]'>
@@ -142,6 +149,7 @@ export default function HomePage() {
                 alt='main-apply-btn'
                 width={200}
                 height={200}
+                priority
               />
               <AccomplishmentCard title='Since' value={'2013'} />
               <AccomplishmentCard title='People' value={'220+'} />
@@ -152,6 +160,7 @@ export default function HomePage() {
                 alt='main-apply-btn'
                 width={200}
                 height={200}
+                priority
               />
             </div>
           </Section>

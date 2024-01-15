@@ -71,6 +71,7 @@ export default function AboutPage() {
           fill
           objectFit='cover'
           objectPosition='center'
+          priority
         />
       </section>
       <main className='max-md:px-8'>
@@ -127,6 +128,7 @@ export default function AboutPage() {
                     src='/images/about-cardnews-1.png'
                     alt='about-cardnews-1'
                     fill
+                    priority
                   />
                 </div>
                 <div className='relative size-[376px] overflow-hidden rounded-lg'>
@@ -134,6 +136,7 @@ export default function AboutPage() {
                     src='/images/about-cardnews-2.png'
                     alt='about-cardnews-1'
                     fill
+                    priority
                   />
                 </div>
               </div>

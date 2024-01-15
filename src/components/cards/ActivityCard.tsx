@@ -92,6 +92,7 @@ export default function ActivityCard(props: ActivityCardProps) {
           fill
           objectFit='cover'
           objectPosition='center'
+          priority
         />
       </div>
     </div>
