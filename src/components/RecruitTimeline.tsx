@@ -82,7 +82,7 @@ export default function RecruitTimeline() {
             <circle cx='10' cy='10' r='10' fill='white' />
           </svg>
           <p
-            className={`text-orange absolute right-10 text-nowrap text-[15px] font-semibold md:hidden`}
+            className={`text-orange absolute right-10 !w-[100px] text-nowrap text-right text-[15px] font-semibold md:hidden`}
           >
             {item.title}
           </p>

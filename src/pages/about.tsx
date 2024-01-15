@@ -107,6 +107,7 @@ export default function AboutPage() {
                 src='/images/about-timeline-desktop.png'
                 alt='about-timeline-desktop'
                 fill
+                priority
               />
             </div>
             <div className='relative h-[540px] w-[292px] md:hidden'>
@@ -114,6 +115,7 @@ export default function AboutPage() {
                 src='/images/about-timeline-mobile.png'
                 alt='about-timeline-mobile'
                 fill
+                priority
               />
             </div>
           </Section>
@@ -123,7 +125,7 @@ export default function AboutPage() {
           >
             <div className='scrollbar-hide overflow-x-scroll max-md:w-[100vw] max-md:px-8'>
               <div className='flex w-fit items-center justify-center gap-8 overflow-x-auto'>
-                <div className='relative size-[376px] overflow-hidden rounded-lg'>
+                <div className='relative size-[376px] overflow-hidden rounded-lg md:size-[300px]'>
                   <Image
                     src='/images/about-cardnews-1.png'
                     alt='about-cardnews-1'
