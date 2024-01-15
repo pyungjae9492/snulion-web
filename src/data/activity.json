@@ -14,7 +14,7 @@
     ],
     "shortDescription": "기획부터 배포까지",
     "description": "기초부터 실전까지 웹 개발을 배워요.\n알찬 자료와 실습 중심의 세미나로\n 기획, 프론트엔드, 백엔드 개발을 모두 경험할 수 있어요.",
-    "imageSrc": "/images/activity-example.png",
+    "imageSrc": "/images/activity-seminar.png",
     "link": "/about?section=curriculum",
     "linkTitle": "커리큘럼 보기"
   },
@@ -33,7 +33,7 @@
     ],
     "shortDescription": "함께 성장하는 즐거움",
     "description": "아기사자 동료들 및 운영진과 함께 세미나 내용을 복습하고 주어진 실습 과제를 해결해요. 주차 별 배정된 팀원들과 함께 성장하며 친목을 도모할 수 있어요.",
-    "imageSrc": "/images/activity-example.png"
+    "imageSrc": "/images/activity-codingday.png"
   },
   {
     "index": 3,
@@ -46,7 +46,7 @@
     ],
     "shortDescription": "커리어의 첫걸음",
     "description": "홈커밍 데이, 연사 초청 및 타 대학교 멋사와의 교류를 통해 다양한 관심사를 공유하고 생생한 현업 이야기를 들으며 보다 자세히 커리어 패스를 계획할 수 있어요.",
-    "imageSrc": "/images/activity-example.png",
+    "imageSrc": "/images/activity-network.png",
     "link": "/gallery",
     "linkTitle": "활동사진 보기"
   },
@@ -61,6 +61,6 @@
     ],
     "shortDescription": "아이디어를 현실로",
     "description": "한 학기동안 배운 지식으로 웹 서비스를 구현해요. 아이디어톤을 통해 아이디어를 검증한 뒤, 기획부터 배포까지의 프로세스를 압축적으로 경험하며 서비스 개발 경험을 쌓아요.",
-    "imageSrc": "/images/activity-example.png"
+    "imageSrc": "/images/activity-hackerthon.png"
   }
 ]

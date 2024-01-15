@@ -35,8 +35,8 @@ export default function AboutActivityCard(props: ActivityCardProps) {
       }}
     >
       <div
-        className={`flex h-full w-full flex-col items-end justify-between rounded-[10px] p-5 md:p-[27px] ${
-          showFullDescription && 'bg-black bg-opacity-70 backdrop:blur-[2px]'
+        className={`flex h-full w-full flex-col items-end justify-between rounded-[10px] bg-black bg-opacity-50 p-5 md:p-[27px] ${
+          showFullDescription && '!bg-opacity-80 backdrop:blur-[2px]'
         } transition-all duration-300 ease-in-out`}
         style={{
           boxShadow: showFullDescription
