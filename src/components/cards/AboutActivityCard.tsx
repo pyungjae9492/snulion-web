@@ -19,8 +19,6 @@ export default function AboutActivityCard(props: ActivityCardProps) {
   const { title, tags, shortDescription, description, imageSrc } = props;
 
   const [showFullDescription, setShowFullDescription] = useState(false);
-
-  const router = useRouter();
   const isMobile = useMobile();
 
   return (
@@ -37,7 +35,7 @@ export default function AboutActivityCard(props: ActivityCardProps) {
       <div
         className={`flex h-full w-full flex-col items-end justify-between rounded-[10px] bg-black bg-opacity-50 p-5 md:p-[27px] ${
           showFullDescription && '!bg-opacity-80 backdrop:blur-[2px]'
-        } transition-all duration-300 ease-in-out`}
+        } transition-all duration-500 ease-in-out`}
         style={{
           boxShadow: showFullDescription
             ? '0px 0px 10px 0px rgba(255, 255, 255, 0.8)'
@@ -46,7 +44,7 @@ export default function AboutActivityCard(props: ActivityCardProps) {
       >
         <div className='flex w-full flex-col md:gap-3'>
           <p
-            className={`transition-color text-[22px] font-extrabold leading-normal duration-300 md:text-[26px] md:leading-tight ${
+            className={`transition-color text-[22px] font-extrabold leading-normal duration-500 md:text-[26px] md:leading-tight ${
               showFullDescription
                 ? tags[0].color === 'orange'
                   ? 'text-orange'
@@ -62,14 +60,14 @@ export default function AboutActivityCard(props: ActivityCardProps) {
           </p>
           <div className='relative'>
             <p
-              className={`absolute text-[13px] transition-all duration-300 md:text-base ${
+              className={`absolute text-[13px] transition-all duration-500 md:text-base ${
                 showFullDescription ? 'opacity-100' : 'opacity-0'
               }`}
             >
               {description}
             </p>
             <p
-              className={`text-base font-bold leading-relaxed transition-all duration-300 md:text-xl ${
+              className={`text-base font-bold leading-relaxed transition-all duration-500 md:text-xl ${
                 showFullDescription ? 'opacity-0' : 'opacity-60'
               }`}
             >

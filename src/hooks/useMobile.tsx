@@ -5,6 +5,12 @@ export default function useMobile() {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
+      if (window.innerWidth <= 768) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+
       window.addEventListener('resize', () => {
         if (window.innerWidth <= 768) {
           setIsMobile(true);
