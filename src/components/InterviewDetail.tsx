@@ -52,8 +52,8 @@ export default function InterviewDetail(props: InterviewDetailProps) {
                 color={content.type === 'question' ? 'orange' : 'white'}
                 className={
                   content.type === 'question'
-                    ? 'mb-10 w-fit md:max-w-[80%] lg:max-w-[60%]'
-                    : 'mb-20 w-fit md:max-w-[90%] lg:max-w-[85%]'
+                    ? 'mb-4 max-w-[80%] md:mb-10 lg:max-w-[60%]'
+                    : 'mb-8 max-w-[90%] md:mb-20 lg:max-w-[85%]'
                 }
               />
             );

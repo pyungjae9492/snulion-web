@@ -13,7 +13,7 @@
       }
     ],
     "shortDescription": "기획부터 배포까지",
-    "description": "기초부터 실전까지 웹 개발을 배워요.\n알찬 자료와 실습 중심의 세미나로\n 기획, 프론트엔드, 백엔드 개발을 모두 경험할 수 있어요.",
+    "description": "기초부터 실전까지 웹 개발을 배워요.\n운영진들이 직접 제작한 알찬 자료와 실습 중심의 세미나로\n기획, 프론트엔드, 백엔드 개발을 모두 경험할 수 있어요.",
     "imageSrc": "/images/activity-seminar.png",
     "link": "/about?section=curriculum",
     "linkTitle": "커리큘럼 보기"
@@ -23,7 +23,7 @@
     "title": "코딩데이",
     "tags": [
       {
-        "content": "1학기",
+        "content": "1, 2학기",
         "color": "blue"
       },
       {

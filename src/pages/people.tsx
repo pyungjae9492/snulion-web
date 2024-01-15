@@ -49,7 +49,7 @@ export default function PeoplePage() {
 
   const onClickInterviewCard = (person: PeopleData) => {
     if (peopleDataList.map((person) => person.id).includes(person.id)) {
-      scrollRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      scrollRef.current?.scrollIntoView({ block: 'start' });
       router.push(`/people?id=${person.id}`, undefined, { shallow: true });
     } else {
       alert('존재하지 않는 인터뷰입니다.');

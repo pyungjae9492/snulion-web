@@ -4,12 +4,14 @@ import Layout from '@/components/layout/Layout';
 import { useEffect, useState } from 'react';
 import galleryData from '@/data/gallery.json';
 import GalleryCard from '@/components/cards/GalleryCard';
+import { useRouter } from 'next/router';
 
 const galleryTabs = ['전체', '세미나', '네트워킹', '친목행사', '기타'];
 
 export default function PeoplePage() {
-  const [currentFilterIndex, setCurrentFilterIndex] = useState(0);
+  const router = useRouter();
 
+  const [currentFilterIndex, setCurrentFilterIndex] = useState(0);
   const [filteredGalleryData, setFilteredGalleryData] = useState(galleryData);
 
   useEffect(() => {

@@ -23,6 +23,7 @@ import ApplyCTASection from '@/components/sections/ApplyCTASection';
 import Tooltip from '@/components/Tooltip';
 import { Star } from 'lucide-react';
 import StarSky from '@/components/StarSky';
+import { getRecruitInfo } from '@/utils/recruitTimeHelpher';
 
 /**
  * SVGR Support
@@ -31,8 +32,6 @@ import StarSky from '@/components/StarSky';
  * You can override the next-env if the type is important to you
  * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
  */
-
-const RECRUIT_DEADLINE = new Date('2024-02-04T23:59:59+09:00');
 
 const mainReviews: SpeechBubbleProps[] = [
   {
@@ -64,11 +63,41 @@ const mainReviews: SpeechBubbleProps[] = [
 export default function HomePage() {
   const router = useRouter();
 
-  const remainingDays = Math.floor(
-    (RECRUIT_DEADLINE.getTime() - Date.now()) / (1000 * 60 * 60 * 24)
-  );
+  const { currentYear, remainingDays, status } = getRecruitInfo();
 
-  const remainingDaysText = remainingDays > 0 ? `D-${remainingDays}` : 'D-Day';
+  const recruitingStatusText =
+    status === 'BEFORE_DOCUMENT_SUBMISSION'
+      ? '모집 시작까지'
+      : status === 'DOCUMENT_SUBMISSION'
+      ? '서류 마감까지'
+      : status === 'INTERVIEW'
+      ? '결과 발표까지'
+      : '리크루팅 완료!';
+  const remainingDaysText =
+    status !== 'RECRUITING_FINISHED'
+      ? remainingDays > 0
+        ? `D-${remainingDays}`
+        : 'D-Day'
+      : '';
+
+  const applyBtnText =
+    status === 'BEFORE_DOCUMENT_SUBMISSION'
+      ? `${currentYear}기 지원하기`
+      : status === 'DOCUMENT_SUBMISSION'
+      ? `${currentYear}기 지원하기`
+      : status === 'INTERVIEW'
+      ? '면접 진행 중'
+      : `${currentYear + 1}기 모집 알림 받기`;
+
+  const onClickApply = () => {
+    if (status === 'BEFORE_DOCUMENT_SUBMISSION') {
+      alert('모집이 아직 시작되지 않았습니다, 모집 시작일까지 기다려주세요.');
+    } else if (status === 'DOCUMENT_SUBMISSION') {
+      router.push('/apply');
+    } else if (status === 'INTERVIEW') {
+      router.push('/apply');
+    }
+  };
 
   return (
     <Layout>
@@ -90,12 +119,16 @@ export default function HomePage() {
             </p>
           </div>
           <div className='relative flex items-center justify-center'>
-            <Button className='hidden md:block' backgroundColor='orange'>
-              <span>12기 지원하기</span>
+            <Button
+              className='hidden md:block'
+              backgroundColor='orange'
+              onClick={onClickApply}
+            >
+              <span>{applyBtnText}</span>
             </Button>
             <div className='absolute right-[-190px] max-md:hidden'>
               <Tooltip
-                content={`서류 마감까지 ${remainingDaysText}🔥`}
+                content={`${recruitingStatusText} ${remainingDaysText}🔥`}
                 arrowPosition='left'
               />
             </div>
@@ -108,10 +141,11 @@ export default function HomePage() {
           <Button
             className='relative max-md:mt-[150px] max-md:w-full max-md:max-w-[450px] md:hidden'
             backgroundColor='orange'
+            onClick={onClickApply}
           >
             <div className='absolute top-[-150px] md:hidden'>
               <Tooltip
-                content={`서류 마감까지 ${remainingDaysText}🔥`}
+                content={`${recruitingStatusText} ${remainingDaysText}🔥`}
                 className='!rounded-3xl !px-6 !py-2.5'
                 arrowPosition='bottom'
               />
@@ -124,7 +158,7 @@ export default function HomePage() {
               height={200}
               priority
             />
-            <span>12기 지원하기</span>
+            <span>{applyBtnText}</span>
           </Button>
           <Image
             className='relative top-11 hidden md:block'
@@ -167,7 +201,7 @@ export default function HomePage() {
           <Section
             title='ACTIVITIES'
             description={
-              '1년 간의 교육 과정을 통해 누구나 자신의 아이디어를\n웹 서비스로 구현할 수 있는 능력을 갖추게 됩니다'
+              '1년 간의 동아리 활동을 통해 누구나 자신의 아이디어를\n웹 서비스로 구현할 수 있는 능력을 갖추게 됩니다.'
             }
           >
             {activityData.map((activity, index) => (
@@ -186,7 +220,7 @@ export default function HomePage() {
           </Section>
           <Section
             title='PROJECTS'
-            description='해커톤에서 탄생한 프로젝트를 소개합니다'
+            description='해커톤에서 탄생한 프로젝트를 소개합니다.'
           >
             <div className='w-[100vw]'>
               <Marquee speed={75}>
@@ -212,7 +246,7 @@ export default function HomePage() {
             </Button>
           </Section>
           <Section title='REVIEWS'>
-            <div className='flex w-full max-w-[500px] flex-col items-center gap-[60px]'>
+            <div className='flex w-full max-w-[500px] flex-col items-center gap-8 md:gap-[60px]'>
               {mainReviews.map((review, index) => (
                 <div key={'main-speech-bubble-' + index}>
                   <SpeechBubble

@@ -1,7 +1,31 @@
 import Button from '@/components/Button';
 import Section from '@/components/sections/Section';
+import { getRecruitInfo } from '@/utils/recruitTimeHelpher';
+import { useRouter } from 'next/router';
 
 export default function ApplyCTASection() {
+  const router = useRouter();
+  const { currentYear, remainingDays, status } = getRecruitInfo();
+
+  const applyBtnText =
+    status === 'BEFORE_DOCUMENT_SUBMISSION'
+      ? `${currentYear}기 지원하기`
+      : status === 'DOCUMENT_SUBMISSION'
+      ? `${currentYear}기 지원하기`
+      : status === 'INTERVIEW'
+      ? '면접 진행 중'
+      : `${currentYear + 1}기 모집 알림 받기`;
+
+  const onClickApply = () => {
+    if (status === 'BEFORE_DOCUMENT_SUBMISSION') {
+      alert('모집이 아직 시작되지 않았습니다, 모집 시작일까지 기다려주세요.');
+    } else if (status === 'DOCUMENT_SUBMISSION') {
+      router.push('/apply');
+    } else if (status === 'INTERVIEW') {
+      router.push('/apply');
+    }
+  };
+
   return (
     <Section
       title={
@@ -10,12 +34,8 @@ export default function ApplyCTASection() {
       titleClassName='leading-normal'
       showBlinkComponent={false}
     >
-      <Button
-        backgroundColor='orange'
-        // TODO: Change to 구글폼 link
-        // onClick={() => router.push('/apply')}
-      >
-        12기 지원하기
+      <Button backgroundColor='orange' onClick={onClickApply}>
+        {applyBtnText}
       </Button>
     </Section>
   );

@@ -55,7 +55,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         } top-0 z-50 flex h-fit w-full flex-row items-center justify-between px-5 py-6 md:px-[60px] md:py-[27.5px]`}
         style={{
           background:
-            'linear-gradient(180deg, rgba(0, 0, 0, 0.80) 0%, rgba(0, 0, 0, 0.00) 100%)',
+            'linear-gradient(180deg, rgba(0, 0, 0, 0.90) 0%, rgba(0, 0, 0, 0.00) 100%)',
+          backdropFilter: 'blur(1px)',
         }}
       >
         <button

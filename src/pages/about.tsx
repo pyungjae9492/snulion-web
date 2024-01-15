@@ -11,7 +11,7 @@ export default function AboutPage() {
   return (
     <Layout>
       <Seo templateTitle='About' />
-      <section className='relative flex min-h-lvh w-full flex-col items-start justify-start gap-16 pt-[20vh] max-md:pb-[10vh] md:gap-20 md:px-[15vw] md:pt-[25vh]'>
+      <section className='relative flex min-h-lvh w-full flex-col items-start justify-start gap-16 pt-[20vh] max-md:pb-[10vh] md:gap-20 md:px-[15vw] md:pt-[20vh]'>
         <div className='z-10 flex max-w-[90vw] flex-col items-start gap-[15px] max-md:px-8 md:max-w-[660px]'>
           <p className='text-xl font-bold md:text-[34px] md:font-semibold'>
             About
@@ -19,9 +19,9 @@ export default function AboutPage() {
           <p className='text-4xl font-bold leading-relaxed md:text-[54px]'>
             <span className='text-orange'>LIKELION</span> <span>SNU</span>
           </p>
-          <p className='text-[13px] text-lg font-normal md:font-semibold'>
+          <p className='text-balance text-[13px] font-normal leading-loose md:text-lg md:font-semibold md:leading-relaxed'>
             {
-              '피로그래밍은 두달의 방학기간 동안 일주일에 3번 이루어지는 세션을 통해 웹 개발에 대한 전반적인 지식과 경험을 쌓는 대학생들을 위한 연합 동아리입니다. 협업툴인 Git과 GitHub를 다루는 방법, 웹 개발 기초 (HTML, CSS, JavaScript)를 배우고, Python과 Django 프레임워크를 기반으로 웹 프로그래밍 학습을 진행합니다. 피로그래밍에서는 성장과 협력의 가치를 이어나갑니다.'
+              '서울대학교 멋쟁이사자처럼에서 더불어 배우며 성장하는 열린 개발 커뮤니티를 형성하세요. 개발로 여러분의 아이디어를 실현할 수 있는 그날까지 포기하지 않고 성장할 수 있도록 도와드리겠습니다.\n\n기수를 거듭할수록 발전하는 교육 자료와 프로젝트로 기획부터 웹개발까지 기초를 탄탄히 다지고, 멋사 네트워크 속에서 다채로운 배움을 누려보세요. 뿐만 아니라 스터디원부터 창업 초기 멤버를 구하는 것까지, 멋사 사람들과 함께라면 무엇이든 해낼 수 있습니다.'
             }
           </p>
         </div>
@@ -29,7 +29,15 @@ export default function AboutPage() {
           <p className='text-[13px] font-semibold md:text-lg'>
             어떤 기술을 배우나요?
           </p>
-          <div className='flex flex-row gap-4 md:gap-5'>
+          <div className='flex flex-row gap-[9px] md:gap-5'>
+            <div className='flex flex-col items-center gap-4 md:gap-5'>
+              <div className='relative size-14 md:size-20'>
+                <Image src='/images/js-logo.png' alt='react-logo' fill />
+              </div>
+              <p className='text-xs font-normal leading-loose md:text-base'>
+                Javascript
+              </p>
+            </div>
             <div className='flex flex-col items-center gap-4 md:gap-5'>
               <div className='relative size-14 md:size-20'>
                 <Image src='/images/react-logo.png' alt='react-logo' fill />
@@ -79,7 +87,7 @@ export default function AboutPage() {
           <Section
             title='주요 활동'
             description={
-              '1년 간의 교육 과정을 통해 누구나 자신의 아이디어를\n웹 서비스로 구현할 수 있는 능력을 갖추게 됩니다'
+              '1년 간의 동아리 활동을 통해 누구나 자신의 아이디어를\n웹 서비스로 구현할 수 있는 능력을 갖추게 됩니다.'
             }
           >
             <div className='md:grid-row-2 grid grid-cols-1 gap-4 md:grid-cols-2'>
@@ -110,7 +118,7 @@ export default function AboutPage() {
                 priority
               />
             </div>
-            <div className='relative h-[540px] w-[292px] md:hidden'>
+            <div className='relative h-[540px] w-[318px] md:hidden'>
               <Image
                 src='/images/about-timeline-mobile.png'
                 alt='about-timeline-mobile'
@@ -121,11 +129,18 @@ export default function AboutPage() {
           </Section>
           <Section
             title='이전 기수 활동 둘러보기'
-            description='인스타 카드뉴스를 통해 멋사에서 진행한 활동을 둘러보세요'
+            description='인스타그램 카드뉴스를 통해 멋사에서 진행한 활동을 둘러보세요.'
           >
             <div className='scrollbar-hide overflow-x-scroll max-md:w-[100vw] max-md:px-8'>
               <div className='flex w-fit items-center justify-center gap-8 overflow-x-auto'>
-                <div className='relative size-[376px] overflow-hidden rounded-lg md:size-[300px]'>
+                <div
+                  className='relative size-[230px] cursor-pointer overflow-hidden rounded-lg md:size-[376px]'
+                  onClick={() =>
+                    window.open(
+                      'https://www.instagram.com/p/C162GCZPmUB/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+                    )
+                  }
+                >
                   <Image
                     src='/images/about-cardnews-1.png'
                     alt='about-cardnews-1'
@@ -133,7 +148,14 @@ export default function AboutPage() {
                     priority
                   />
                 </div>
-                <div className='relative size-[376px] overflow-hidden rounded-lg'>
+                <div
+                  className='relative size-[230px] cursor-pointer overflow-hidden rounded-lg md:size-[376px]'
+                  onClick={() =>
+                    window.open(
+                      'https://www.instagram.com/p/C2AEkt_vxzO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+                    )
+                  }
+                >
                   <Image
                     src='/images/about-cardnews-2.png'
                     alt='about-cardnews-1'

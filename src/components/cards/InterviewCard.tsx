@@ -18,7 +18,7 @@ export default function InterviewCard(props: InterviewCardProps) {
   const showingYear = Array.isArray(year) ? Math.max(...year) : year;
 
   return (
-    <div className='flex h-[397px] w-[359px] cursor-pointer flex-col rounded-lg bg-white bg-opacity-10 px-9 pb-4 pt-9'>
+    <div className='flex h-[397px] w-[359px] cursor-pointer flex-col rounded-lg bg-white bg-opacity-10 px-7 pb-4 pt-7 md:px-9 md:pt-9'>
       <div className='flex w-full flex-row items-start justify-start gap-9'>
         <div className='relative size-[100px]'>
           <Image
@@ -36,10 +36,12 @@ export default function InterviewCard(props: InterviewCardProps) {
           <Tag content={`${showingYear}기 운영진`} color='black' />
         </div>
       </div>
-      <p className='mb-4 mt-[26px] text-xl font-bold'>{title}</p>
+      <p className='mb-4 mt-[26px] text-xl font-semibold md:font-bold'>
+        {title}
+      </p>
       <HighlightText
-        containerClassName='h-[120px] shrink-0 overflow-hidden'
-        textClassName='text-base leading-loose'
+        containerClassName='h-[130px] shrink-0 overflow-hidden'
+        textClassName='text-[13px] md:text-base leading-loose'
         text={content}
       />
       <div className='flex h-full items-end justify-end'>

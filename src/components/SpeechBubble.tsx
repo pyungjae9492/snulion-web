@@ -5,10 +5,11 @@ export interface SpeechBubbleProps {
   color?: string;
   type: 'left' | 'right';
   className?: string;
+  children?: React.ReactNode;
 }
 
 export default function SpeechBubble(props: SpeechBubbleProps) {
-  const { content, color, type, className } = props;
+  const { content, color, type, className, children } = props;
 
   return (
     <div
@@ -33,11 +34,12 @@ export default function SpeechBubble(props: SpeechBubbleProps) {
         }
       >
         <HighlightText
-          textClassName={`text-lg font-normal leading-normal ${
+          textClassName={`text-[13px] md:text-lg font-normal leading-normal text-balanced ${
             color === 'white' && 'text-black'
           }`}
           text={content}
         />
+        {children}
       </div>
     </div>
   );
