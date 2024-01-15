@@ -1,4 +1,5 @@
 import Tag from '@/components/Tag';
+import { useInView } from 'react-intersection-observer';
 
 export type RecruitTimelineItem = {
   title: string;
@@ -35,8 +36,15 @@ const recruitTimelineItems: RecruitTimelineItem[] = [
 ];
 
 export default function RecruitTimeline() {
+  const [ref, inView, entry] = useInView({
+    threshold: 1,
+  });
+
   return (
-    <div className='relative flex w-full flex-col items-center justify-center gap-[35px] max-md:pb-20 md:flex-row md:gap-[180px]'>
+    <div
+      ref={ref}
+      className='relative flex w-full flex-col items-center justify-center gap-[35px] max-md:pb-20 md:flex-row md:gap-[180px]'
+    >
       {recruitTimelineItems.map((item, index) => (
         <div
           key={'recruit-item-' + index}
@@ -86,7 +94,9 @@ export default function RecruitTimeline() {
         </div>
       ))}
       <div
-        className='absolute h-[2px] w-full max-w-[1100px] max-md:hidden'
+        className={`line absolute h-[2px] w-full max-w-[1100px] transition-all max-md:hidden ${
+          inView ? 'animate' : ''
+        }`}
         style={{
           background:
             'linear-gradient(90deg, rgba(255, 255, 255, 0.00) -0.76%, #FFF 26%, #FFF 67.98%, rgba(255, 255, 255, 0.00) 99.99%)',

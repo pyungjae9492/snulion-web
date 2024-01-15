@@ -1,30 +1,121 @@
 [
   {
-    "imageSrc": "/images/project-example.png",
+    "imageSrc": "/images/project-thumbnail/EasyDex_img.png",
+    "year": 11,
+    "title": "Easy Dex",
+    "description": "경제 초보를 위해 각종 지표를 유저친화적 UI로 전달하기 위한 플랫폼",
+    "link": null
+  },
+  {
+    "imageSrc": "/images/project-thumbnail/PDFSUMMARY_img.png",
+    "year": 11,
+    "title": "PDF SUMMARY",
+    "description": "텍스트 기반의 PDF 파일을 ChatGPT를 통해 요약해주는 웹 서비스",
+    "link": null
+  },
+  {
+    "imageSrc": "/images/project-thumbnail/치타_img.png",
+    "year": 11,
+    "title": "치타",
+    "description": "일정 및 목표 관리에 어려움을 겪는 대학생들을 위한 일정 관리 서비스",
+    "link": null
+  },
+  {
+    "imageSrc": "/images/project-thumbnail/마이카롱_img.png",
+    "year": 11,
+    "title": "마이카롱",
+    "description": "하루의 감정을 마카롱으로 표현하고 공유할 수 있는 다이어리 어플리케이션",
+    "link": null
+  },
+  {
+    "imageSrc": "/images/project-thumbnail/UnivGPT_img.jpg",
+    "year": 11,
+    "title": "UnivGPT",
+    "description": "대학생을 위한 GPT 프롬프트를 만들고 공유할 수 있는 프롬프트 제작 플랫폼",
+    "link": null
+  },
+  {
+    "imageSrc": "/images/project-thumbnail/취준준 for Programmers_img.jpg",
     "year": 10,
     "title": "취준준 for Programmers",
-    "description": "개발자를 꿈꾸는 사람들을 위해 개발자 커리어 관련 정보를 제공하는 웹사이트",
-    "link": ""
+    "description": "개발자를 꿈꾸는 사람들을 위한 커리어 관련 정보 제공 웹사이트",
+    "link": "https://www.instagram.com/p/Ch07OFCvkyO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
-    "imageSrc": "/images/project-example.png",
+    "imageSrc": "/images/project-thumbnail/투두투두_img.jpg",
+    "year": 10,
+    "title": "투두투두",
+    "description": "TPO에 따라 달라지는 나의 모습에 맞추어 작성하는 페르소나 투두리스트 서비스",
+    "link": "https://www.instagram.com/p/Ch07jYHP0bo/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "imageSrc": "/images/project-thumbnail/인편 대신 전해드립니다_img.jpg",
+    "year": 10,
+    "title": "인편 대신 전해드립니다",
+    "description": "훈련소에 들어간 친구들을 위한 인편 전송을 도와주는 서비스",
+    "link": "https://www.instagram.com/p/Ch9M2pyPrM6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "imageSrc": "/images/project-thumbnail/TravelUs_img.jpg",
+    "year": 10,
+    "title": "TravelUs",
+    "description": "위치와 여행 성향 기반 여행 동행 매칭 서비스",
+    "link": "https://www.instagram.com/p/Ch9NScvPBpf/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "imageSrc": "/images/project-thumbnail/셔터 (Shutter)_img.jpg",
+    "year": 10,
+    "title": "셔터 (Shutter)",
+    "description": "증명사진 맛집을 찾고싶은 분들을 위한 사진관 검색 서비스",
+    "link": "https://www.instagram.com/p/CiBoxWAvHrd/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "imageSrc": "/images/project-thumbnail/해몽도감, 좋은 꿈 꾸셨나요_img.jpg",
+    "year": 10,
+    "title": "해몽도감, <좋은 꿈 꾸셨나요?>",
+    "description": "오늘 꾼 꿈을 기록하고 꿈 풀이를 확인할 수 있는 서비스",
+    "link": "https://www.instagram.com/p/CiBo9chvgne/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "imageSrc": "/images/project-thumbnail/워크북(WalkBook)_img.jpg",
     "year": 9,
-    "title": "취준준 for Programmers",
-    "description": "개발자를 꿈꾸는 사람들을 위해 개발자 커리어 관련 정보를 제공하는 웹사이트",
-    "link": ""
+    "title": "워크북(WalkBook)",
+    "description": "현 위치 기반으로 산책로에 대한 정보와 경험을 공유할 수 있는 웹서비스",
+    "link": "https://www.instagram.com/p/CR2bNEijmgP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
-    "imageSrc": "/images/project-example.png",
-    "year": 11,
-    "title": "취준준 for Programmers",
-    "description": "개발자를 꿈꾸는 사람들을 위해 개발자 커리어 관련 정보를 제공하는 웹사이트",
-    "link": ""
+    "imageSrc": "/images/project-thumbnail/멋사人커뮤니티_img.jpg",
+    "year": 9,
+    "title": "멋사人커뮤니티",
+    "description": "멋사 사람들을 위한 커뮤니티 서비스",
+    "link": "https://www.instagram.com/p/CR4_OXkjN15/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
-    "imageSrc": "/images/project-example.png",
-    "year": 11,
-    "title": "취준준 for Programmers",
-    "description": "개발자를 꿈꾸는 사람들을 위해 개발자 커리어 관련 정보를 제공하는 웹사이트",
-    "link": ""
+    "imageSrc": "/images/project-thumbnail/P.E.T_img.jpg",
+    "year": 9,
+    "title": "P.E.T",
+    "description": "반려동물을 키우거나 좋아하는 사람들을 위한 펫 기반 SNS 서비스",
+    "link": "https://www.instagram.com/p/CR7yya5F6fF/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "imageSrc": "/images/project-thumbnail/코딩노트(CodingNotes)_img.jpg",
+    "year": 9,
+    "title": "코딩노트(CodingNotes)",
+    "description": "코딩을 배우고 있는 사람들이 구글링 기록을 아카이빙할 수 있는 크롬 익스텐션",
+    "link": "https://www.instagram.com/p/CR-7FrOlmSd/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "imageSrc": "/images/project-thumbnail/FEB_img.png",
+    "year": 9,
+    "title": "FEB (For Every Beginners)",
+    "description": "여러 분야의 초보자들을 위한 정보 공유 커뮤니티 서비스",
+    "link": "https://www.instagram.com/p/CSD5CJEF7bq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "imageSrc": "/images/project-thumbnail/Quiet Place_img.jpg",
+    "year": 9,
+    "title": "Quiet Place",
+    "description": "집중하기 좋은 장소를 찾고 싶은 사람들을 위한 장소 공유 서비스",
+    "link": "https://www.instagram.com/p/CSG89dDFs4G/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   }
 ]

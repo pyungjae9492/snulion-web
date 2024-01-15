@@ -20,6 +20,9 @@ import RecruitTimeline, {
 import SponsorSection from '@/components/sections/SponsorSection';
 import activityData from '@/data/activity.json';
 import ApplyCTASection from '@/components/sections/ApplyCTASection';
+import Tooltip from '@/components/Tooltip';
+import { Star } from 'lucide-react';
+import StarSky from '@/components/StarSky';
 
 /**
  * SVGR Support
@@ -29,9 +32,7 @@ import ApplyCTASection from '@/components/sections/ApplyCTASection';
  * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
  */
 
-// !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
-// Before you begin editing, follow all comments with `STARTERCONF`,
-// to customize the default configuration.
+const RECRUIT_DEADLINE = new Date('2024-02-04T23:59:59+09:00');
 
 const mainReviews: SpeechBubbleProps[] = [
   {
@@ -63,10 +64,17 @@ const mainReviews: SpeechBubbleProps[] = [
 export default function HomePage() {
   const router = useRouter();
 
+  const remainingDays = Math.floor(
+    (RECRUIT_DEADLINE.getTime() - Date.now()) / (1000 * 60 * 60 * 24)
+  );
+
+  const remainingDaysText = remainingDays > 0 ? `D-${remainingDays}` : 'D-Day';
+
   return (
     <Layout>
       <Seo templateTitle='Home' />
       <main className='max-md:px-8'>
+        <StarSky />
         <section className='relative flex h-dvh w-full flex-col items-center justify-center gap-10'>
           <div className='flex flex-col items-center gap-5'>
             <div className='relative h-[22px] w-[192px] md:h-[30px] md:w-[260px]'>
@@ -76,9 +84,17 @@ export default function HomePage() {
               {'기술적 장벽을 허물고\n아이디어를 실현하는 사람들'}
             </p>
           </div>
-          <Button className='hidden md:block' backgroundColor='orange'>
-            <span>12기 지원하기</span>
-          </Button>
+          <div className='relative flex items-center justify-center'>
+            <Button className='hidden md:block' backgroundColor='orange'>
+              <span>12기 지원하기</span>
+            </Button>
+            <div className='absolute right-[-190px] max-md:hidden'>
+              <Tooltip
+                content={`서류 마감까지 ${remainingDaysText}🔥`}
+                arrowPosition='left'
+              />
+            </div>
+          </div>
           <p className='text-center text-[18px] font-semibold leading-normal'>
             {
               '서울대학교 멋쟁이 사자처럼은\n아이디어를 현실로 만드는 웹 프로그래밍 동아리입니다.'
@@ -88,6 +104,13 @@ export default function HomePage() {
             className='relative max-md:mt-[150px] max-md:w-full max-md:max-w-[450px] md:hidden'
             backgroundColor='orange'
           >
+            <div className='absolute top-[-150px] md:hidden'>
+              <Tooltip
+                content={`서류 마감까지 ${remainingDaysText}🔥`}
+                className='!rounded-3xl !px-6 !py-2.5'
+                arrowPosition='bottom'
+              />
+            </div>
             <Image
               className='absolute top-[-116px] hidden max-md:block'
               src='/images/main-lion.png'

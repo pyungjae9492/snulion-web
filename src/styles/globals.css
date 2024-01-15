@@ -284,3 +284,15 @@
 .svg-visible {
   animation: blink 2s infinite; /* Adjust the timing to control the speed of the blink */
 }
+
+.line {
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 2s ease, opacity 2s ease;
+}
+
+.line.animate {
+  opacity: 1;
+  transform: scaleX(1);
+}

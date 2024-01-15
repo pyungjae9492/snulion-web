@@ -6,7 +6,7 @@ interface InterviewCardProps {
   year: number;
   title: string;
   description: string;
-  link: string;
+  link: string | null;
 }
 
 export default function ProjectCard(props: InterviewCardProps) {
@@ -15,7 +15,11 @@ export default function ProjectCard(props: InterviewCardProps) {
   return (
     <div
       className='flex h-[380px] w-[351px] cursor-pointer flex-col rounded-lg bg-white bg-opacity-10 p-7'
-      onClick={() => link && window.open(link, '_blank')}
+      onClick={() =>
+        link
+          ? window.open(link, '_blank')
+          : alert('인스타그램 카드 뉴스 업로드 준비중입니다')
+      }
     >
       <div className='flex h-full w-full flex-col gap-[22px]'>
         <div className='relative h-[220px] w-[300px]'>

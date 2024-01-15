@@ -124,7 +124,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </header>
       <main className='z-10 h-fit w-full'>{children}</main>
       <footer
-        className='flex flex-row justify-between px-[33px] pb-[55px] pt-[179px] md:px-[105px] md:pb-[87px] md:pt-[432px]'
+        className='z-10 flex flex-row justify-between px-[33px] pb-[55px] pt-[179px] md:px-[105px] md:pb-[87px] md:pt-[432px]'
         style={{
           background:
             'linear-gradient(180deg, rgba(27, 27, 27, 0.00) 0%, #1B1B1B 68.23%)',

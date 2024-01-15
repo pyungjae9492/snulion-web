@@ -11,7 +11,7 @@ export default function AboutPage() {
   return (
     <Layout>
       <Seo templateTitle='About' />
-      <section className='relative flex h-lvh w-full flex-col items-start justify-start gap-16 pt-[20vh] md:gap-20 md:px-[15vw] md:pt-[25vh]'>
+      <section className='relative flex min-h-lvh w-full flex-col items-start justify-start gap-16 pt-[20vh] max-md:pb-[10vh] md:gap-20 md:px-[15vw] md:pt-[25vh]'>
         <div className='z-10 flex max-w-[90vw] flex-col items-start gap-[15px] max-md:px-8 md:max-w-[660px]'>
           <p className='text-xl font-bold md:text-[34px] md:font-semibold'>
             About
@@ -120,20 +120,22 @@ export default function AboutPage() {
             title='이전 기수 활동 둘러보기'
             description='인스타 카드뉴스를 통해 멋사에서 진행한 활동을 둘러보세요'
           >
-            <div className='flex items-center justify-center gap-8'>
-              <div className='relative size-[376px] overflow-hidden rounded-lg'>
-                <Image
-                  src='/images/about-cardnews-1.png'
-                  alt='about-cardnews-1'
-                  fill
-                />
-              </div>
-              <div className='relative size-[376px] overflow-hidden rounded-lg'>
-                <Image
-                  src='/images/about-cardnews-2.png'
-                  alt='about-cardnews-1'
-                  fill
-                />
+            <div className='scrollbar-hide overflow-x-scroll max-md:w-[100vw] max-md:px-8'>
+              <div className='flex w-fit items-center justify-center gap-8 overflow-x-auto'>
+                <div className='relative size-[376px] overflow-hidden rounded-lg'>
+                  <Image
+                    src='/images/about-cardnews-1.png'
+                    alt='about-cardnews-1'
+                    fill
+                  />
+                </div>
+                <div className='relative size-[376px] overflow-hidden rounded-lg'>
+                  <Image
+                    src='/images/about-cardnews-2.png'
+                    alt='about-cardnews-1'
+                    fill
+                  />
+                </div>
               </div>
             </div>
           </Section>

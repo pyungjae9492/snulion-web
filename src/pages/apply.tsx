@@ -1,3 +1,4 @@
+import Button from '@/components/Button';
 import FAQ from '@/components/FAQ';
 import Layout from '@/components/layout/Layout';
 import RecruitTimeline from '@/components/RecruitTimeline';
@@ -5,6 +6,7 @@ import ApplyCTASection from '@/components/sections/ApplyCTASection';
 import Section from '@/components/sections/Section';
 import Seo from '@/components/Seo';
 import SpeechBubble from '@/components/SpeechBubble';
+import Tooltip from '@/components/Tooltip';
 import Image from 'next/image';
 import Marquee from 'react-fast-marquee';
 
@@ -13,7 +15,36 @@ export default function ApplyPage() {
     <Layout>
       <Seo templateTitle='Apply' />
       <main className='max-md:px-8'>
-        <section className='mt-14 flex flex-col items-center gap-[120px] md:gap-[240px]'>
+        <section className='mt-[110px] flex flex-col items-center gap-[120px] md:gap-[240px]'>
+          <div className='flex w-full max-w-[900px] flex-col gap-[25px] md:gap-[15px]'>
+            <div className='flex flex-col items-center gap-[10px] md:items-start md:gap-[5px]'>
+              <Tooltip content='서류 마감까지 D-20 🦁' arrowPosition='bottom' />
+              <p className='text-[32px] font-bold leading-normal md:text-[54px]'>
+                <span className='text-orange'>12기 아기사자</span>{' '}
+                <span>모집 중 🔥</span>
+              </p>
+            </div>
+            <div className='flex w-full flex-col items-center justify-between max-md:gap-[110px] md:flex-row'>
+              <p className='text-sm font-normal leading-relaxed max-md:text-center md:text-lg md:font-semibold'>
+                {
+                  '멋사와 함께 성장할 열정 있는 12기 아기사자를 기다립니다!\n12기 서류 접수 기간 : 24.01.22~24.02.04'
+                }
+              </p>
+              <Button
+                className='relative max-md:w-full'
+                backgroundColor='orange'
+              >
+                <Image
+                  className='absolute top-[-86.5px]'
+                  src='/images/main-lion.png'
+                  alt='apply-1'
+                  width={150}
+                  height={150}
+                />
+                <span>12기 지원하기</span>
+              </Button>
+            </div>
+          </div>
           <Section title='모집 대상'>
             <div className='flex w-full flex-col justify-center gap-[14px] md:flex-row md:gap-8'>
               <div className='flex h-[133px] w-full items-center justify-center rounded-[20px] bg-white bg-opacity-10 md:h-[220px] md:max-w-[280px]'>
