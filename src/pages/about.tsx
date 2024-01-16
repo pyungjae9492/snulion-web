@@ -19,9 +19,9 @@ export default function AboutPage() {
           <p className='text-4xl font-bold leading-relaxed md:text-[54px]'>
             <span className='text-orange'>LIKELION</span> <span>SNU</span>
           </p>
-          <p className='text-balance text-[13px] font-normal leading-loose md:text-lg md:font-semibold md:leading-relaxed'>
+          <p className='text-[13px] font-normal leading-loose md:text-lg md:font-semibold md:leading-relaxed'>
             {
-              '서울대학교 멋쟁이사자처럼에서 더불어 배우며 성장하는 열린 개발 커뮤니티를 형성하세요. 개발로 여러분의 아이디어를 실현할 수 있는 그날까지 포기하지 않고 성장할 수 있도록 도와드리겠습니다.\n\n기수를 거듭할수록 발전하는 교육 자료와 프로젝트로 기획부터 웹개발까지 기초를 탄탄히 다지고, 멋사 네트워크 속에서 다채로운 배움을 누려보세요. 뿐만 아니라 스터디원부터 창업 초기 멤버를 구하는 것까지, 멋사 사람들과 함께라면 무엇이든 해낼 수 있습니다.'
+              '서울대학교 멋쟁이사자처럼에서 더불어 배우며 성장하는 열린 개발 커뮤니티를 형성하세요!\n\n기수를 거듭할수록 발전하는 교육 자료로 1년 간 기획부터 웹개발까지 기초를 탄탄히 다지고, 여름방학 해커톤과 2학기 스크럼 프로젝트를 통해 실용적 개발 지식을 익힙니다. 또한 연사 초청 강연, 오피스투어, 연합 해커톤 등 멋사 네트워크 속에서 더욱 다채로운 배움을 경험할 수 있습니다.\n개발로 여러분의 아이디어를 실현할 수 있는 그날까지 포기하지 않고 성장할 수 있도록 멋사 운영진들이 함께하겠습니다.'
             }
           </p>
         </div>
@@ -110,7 +110,7 @@ export default function AboutPage() {
               '활동 기간 : 2024.03 ~ 2024.12\n*모든 활동은 대면으로 진행되며, 일부 변동 가능성이 있습니다.'
             }
           >
-            <div className='relative h-[669px] w-[566px] max-md:hidden'>
+            <div className='relative h-[699px] w-[599px] max-md:hidden'>
               <Image
                 src='/images/about-timeline-desktop.png'
                 alt='about-timeline-desktop'
