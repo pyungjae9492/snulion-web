@@ -18,7 +18,7 @@ export default function InterviewCard(props: InterviewCardProps) {
   const showingYear = Array.isArray(year) ? Math.max(...year) : year;
 
   return (
-    <div className='flex h-[397px] w-[359px] cursor-pointer flex-col rounded-lg bg-white bg-opacity-10 px-7 pb-4 pt-7 md:px-9 md:pt-9'>
+    <div className='relative flex h-[397px] w-[359px] cursor-pointer flex-col rounded-lg bg-white bg-opacity-10 px-7 pb-4 pt-7 md:px-9 md:pt-9'>
       <div className='flex w-full flex-row items-start justify-start gap-9'>
         <div className='relative size-[100px]'>
           <Image
@@ -39,11 +39,17 @@ export default function InterviewCard(props: InterviewCardProps) {
       <p className='mb-4 mt-[26px] text-xl font-semibold md:font-bold'>
         {title}
       </p>
-      <HighlightText
-        containerClassName='h-[130px] shrink-0 overflow-hidden'
-        textClassName='text-[13px] md:text-base leading-loose'
-        text={content}
-      />
+      <div className='relative'>
+        <HighlightText
+          containerClassName='h-[130px] md:h-[120px] shrink-0 overflow-hidden'
+          textClassName='text-[13px] md:text-base leading-loose'
+          text={content}
+        />
+        <div
+          className='absolute bottom-0 left-0 h-[40%] w-full bg-gradient-to-t from-[#3e4248] to-transparent'
+          style={{ zIndex: 1 }}
+        />
+      </div>
       <div className='flex h-full items-end justify-end'>
         <p className='text-base font-bold'>MORE</p>
       </div>

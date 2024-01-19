@@ -11,8 +11,8 @@ export default function AboutPage() {
   return (
     <Layout>
       <Seo templateTitle='About' />
-      <section className='relative flex min-h-lvh w-full flex-col items-start justify-start gap-16 pt-[20vh] max-md:pb-[10vh] md:gap-20 md:px-[15vw] md:pt-[20vh]'>
-        <div className='z-10 flex max-w-[90vw] flex-col items-start gap-[15px] max-md:px-8 md:max-w-[660px]'>
+      <section className='relative flex min-h-lvh w-full flex-col items-start justify-start gap-16 pt-[20vh] max-md:pb-[10vh] md:gap-12 md:px-[15vw] md:pt-[20vh]'>
+        <div className='z-10 flex max-w-[90vw] flex-col items-start gap-[15px] max-md:px-8 md:max-w-[800px]'>
           <p className='text-xl font-bold md:text-[34px] md:font-semibold'>
             About
           </p>

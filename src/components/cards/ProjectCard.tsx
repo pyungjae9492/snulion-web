@@ -14,7 +14,7 @@ export default function ProjectCard(props: InterviewCardProps) {
 
   return (
     <div
-      className='flex h-[380px] w-[351px] cursor-pointer flex-col rounded-lg bg-white bg-opacity-10 p-7'
+      className='flex h-[360px] w-[351px] cursor-pointer flex-col rounded-lg border border-l-0 border-t-0 border-white border-opacity-20 bg-white bg-opacity-10 p-7 shadow-2xl backdrop-blur-[1px]'
       onClick={() =>
         link
           ? window.open(link, '_blank')
@@ -22,7 +22,7 @@ export default function ProjectCard(props: InterviewCardProps) {
       }
     >
       <div className='flex h-full w-full flex-col gap-[22px]'>
-        <div className='relative h-[220px] w-[300px]'>
+        <div className='relative h-[180px] w-[300px]'>
           <Image src={imageSrc} alt='interview-card-image' fill priority />
         </div>
         <div className='flex flex-row justify-between'>

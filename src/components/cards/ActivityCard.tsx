@@ -51,7 +51,7 @@ export default function ActivityCard(props: ActivityCardProps) {
       ref={cardRef}
       className={`flex flex-col-reverse ${
         index % 2 === 1 ? 'md:flex-row' : 'md:flex-row-reverse'
-      } max-w-[1000px] items-start justify-center gap-4 rounded-[10px] bg-white bg-opacity-10 p-0 max-md:w-full md:gap-20 md:rounded-[30px] md:px-[90px] md:py-[50px]`}
+      } max-w-[1000px] items-start justify-center gap-4 rounded-[10px] border border-l-0 border-t-0 border-white border-opacity-20 bg-white bg-opacity-10 p-0 shadow-2xl backdrop-blur-[1px] max-md:w-full md:gap-20 md:rounded-[30px] md:px-[90px] md:py-[50px]`}
       onPointerMove={handlePointerMovement}
       onPointerLeave={handlePointerReset}
     >

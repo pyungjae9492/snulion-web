@@ -47,7 +47,7 @@ export default function PeoplePage() {
     }
   }, [currentFilterIndex]);
 
-  const onClickInterviewCard = (person: PeopleData) => {
+  const onClickInterviewCard = (e: any, person: PeopleData) => {
     if (peopleDataList.map((person) => person.id).includes(person.id)) {
       scrollRef.current?.scrollIntoView({ block: 'start' });
       router.push(`/people?id=${person.id}`, undefined, { shallow: true });
@@ -80,7 +80,7 @@ export default function PeoplePage() {
                 <div
                   key={'interview-card-wrapper-' + index}
                   className='h-fit w-fit'
-                  onClick={() => onClickInterviewCard(person)}
+                  onClick={(e) => onClickInterviewCard(e, person)}
                 >
                   <InterviewCard
                     key={'interview-card-' + index}

@@ -1,20 +1,194 @@
 [
   {
-    "imageSrc": "/images/gallery-example.png",
-    "type": "네트워킹",
-    "title": "2023 보라 메이커스데이",
-    "date": "2023.12"
-  },
-  {
-    "imageSrc": "/images/gallery-example.png",
-    "type": "친목행사",
-    "title": "2023 보라 메이커스데이",
-    "date": "2023.12"
-  },
-  {
-    "imageSrc": "/images/gallery-example.png",
+    "imageSrc": "/images/gallery-thumbnail/세미나1-2023.png",
     "type": "세미나",
-    "title": "2023 보라 메이커스데이",
+    "title": "세미나1",
+    "date": "2023"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/세미나2-2023.png",
+    "type": "세미나",
+    "title": "세미나2",
+    "date": "2023"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/세미나3-2023.png",
+    "type": "세미나",
+    "title": "세미나3",
+    "date": "2023"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/세미나4-2023.png",
+    "type": "세미나",
+    "title": "세미나4",
+    "date": "2023"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/굿노트_외부강연-2023-05.png",
+    "type": "네트워킹",
+    "title": "굿노트 외부강연",
+    "date": "2023.05"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/메이커스데이_보라_2023(1)-2023-12.png",
+    "type": "네트워킹",
+    "title": "메이커스데이 보라 2023(1)",
     "date": "2023.12"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/메이커스데이_보라_2023(2)-2023-12.png",
+    "type": "네트워킹",
+    "title": "메이커스데이 보라 2023(2)",
+    "date": "2023.12"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/메이커스데이_보라_2023(3)-2023-12.png",
+    "type": "네트워킹",
+    "title": "메이커스데이 보라 2023(3)",
+    "date": "2023.12"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/채널톡_오피스투어-2023-05.png",
+    "type": "네트워킹",
+    "title": "채널톡 오피스투어",
+    "date": "2023.05"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/토스_오피스투어-2024-01.png",
+    "type": "네트워킹",
+    "title": "토스 오피스투어",
+    "date": "2024.01"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/홈커밍데이(1)-2023-08.png",
+    "type": "네트워킹",
+    "title": "홈커밍데이(1)",
+    "date": "2023.08"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/홈커밍데이(2)-2023-08.png",
+    "type": "네트워킹",
+    "title": "홈커밍데이(2)",
+    "date": "2023.08"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/홈커밍데이(3)-2023-08.png",
+    "type": "네트워킹",
+    "title": "홈커밍데이(3)",
+    "date": "2023.08"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/홈커밍데이(4)-2023-08.png",
+    "type": "네트워킹",
+    "title": "홈커밍데이(4)",
+    "date": "2023.08"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/11기_운영진_송년회-2023.12.png",
+    "type": "친목행사",
+    "title": "11기 운영진 송년회",
+    "date": "2023.12"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/관악산_등산-2023-12.png",
+    "type": "친목행사",
+    "title": "관악산 등산",
+    "date": "2023.12"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/멋사_MT(1)-2023-04.png",
+    "type": "친목행사",
+    "title": "멋사 MT(1)",
+    "date": "2023.04"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/멋사_MT(2)-2023-04.png",
+    "type": "친목행사",
+    "title": "멋사 MT(2)",
+    "date": "2023.04"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/멋사_MT(3)-2023-04.png",
+    "type": "친목행사",
+    "title": "멋사 MT(3)",
+    "date": "2023.04"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/멋사_MT(4)-2023-04.png",
+    "type": "친목행사",
+    "title": "멋사 MT(4)",
+    "date": "2023.04"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/멋사_MT(5)-2023-04.png",
+    "type": "친목행사",
+    "title": "멋사 MT(5)",
+    "date": "2023.04"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/멋사_MT(6)-2023-04.png",
+    "type": "친목행사",
+    "title": "멋사 MT(6)",
+    "date": "2023.04"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/코딩데이_뒷풀이(1)-2023-03.png",
+    "type": "친목행사",
+    "title": "코딩데이 뒷풀이(1)",
+    "date": "2023.03"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/코딩데이_뒷풀이(2)-2023.png",
+    "type": "친목행사",
+    "title": "코딩데이 뒷풀이(2)",
+    "date": "2023"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/코딩데이_뒷풀이(3)-2023-06.png",
+    "type": "친목행사",
+    "title": "코딩데이 뒷풀이(3)",
+    "date": "2023.06"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/코딩데이_뒷풀이(4)-2023-03.png",
+    "type": "친목행사",
+    "title": "코딩데이 뒷풀이(4)",
+    "date": "2023.03"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/코딩데이_뒷풀이(5)-2023.png",
+    "type": "친목행사",
+    "title": "코딩데이 뒷풀이(5)",
+    "date": "2023"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/클라이밍-2023-06.png",
+    "type": "친목행사",
+    "title": "클라이밍",
+    "date": "2023.06"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/여름방학_해커톤(1)-2023-07.png",
+    "type": "기타",
+    "title": "여름방학 해커톤(1)",
+    "date": "2023.07"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/여름방학_해커톤(2)-2023-07.png",
+    "type": "기타",
+    "title": "여름방학 해커톤(2)",
+    "date": "2023.07"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/여름방학_해커톤(3)-2023-07.png",
+    "type": "기타",
+    "title": "여름방학 해커톤(3)",
+    "date": "2023.07"
+  },
+  {
+    "imageSrc": "/images/gallery-thumbnail/여름방학_해커톤(4)-2023-07.png",
+    "type": "기타",
+    "title": "여름방학 해커톤(4)",
+    "date": "2023.07"
   }
 ]

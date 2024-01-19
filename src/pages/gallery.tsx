@@ -1,7 +1,7 @@
 import Filter from '@/components/Filter';
 import Seo from '@/components/Seo';
 import Layout from '@/components/layout/Layout';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import galleryData from '@/data/gallery.json';
 import GalleryCard from '@/components/cards/GalleryCard';
 import { useRouter } from 'next/router';
@@ -14,13 +14,20 @@ export default function PeoplePage() {
   const [currentFilterIndex, setCurrentFilterIndex] = useState(0);
   const [filteredGalleryData, setFilteredGalleryData] = useState(galleryData);
 
+  const sortedGalleryData = useMemo(() => {
+    return galleryData.sort((a, b) => {
+      return new Date(b.date).getTime() - new Date(a.date).getTime();
+    });
+  }, []);
+
   useEffect(() => {
     if (currentFilterIndex === 0) {
-      setFilteredGalleryData(galleryData);
+      setFilteredGalleryData(sortedGalleryData);
     } else {
       setFilteredGalleryData(
-        galleryData.filter(
-          (galleryData) => galleryData.type === galleryTabs[currentFilterIndex]
+        sortedGalleryData.filter(
+          (sortedGalleryData) =>
+            sortedGalleryData.type === galleryTabs[currentFilterIndex]
         )
       );
     }

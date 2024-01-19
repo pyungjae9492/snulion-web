@@ -60,12 +60,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         }}
       >
         <button
-          className='relative h-4 w-[95px] shrink-0 md:h-[30px] md:w-[236px]'
+          className='relative h-4 w-[95px] shrink-0 md:h-[30px] md:w-[260px]'
           onClick={onClickHeaderLogo}
         >
           <Image
             className='hidden md:block'
-            src='/images/header-logo.png'
+            src='/images/main-logo.png'
             alt='logo'
             fill
           />
@@ -139,13 +139,18 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             서울대학교 멋쟁이사자처럼
           </p>
         </div>
-        <div className='relative size-[48px] md:size-[68px]'>
+        <button
+          className='relative size-[48px] md:size-[68px]'
+          onClick={() =>
+            window.open('https://www.instagram.com/likelion_snu/', '_blank')
+          }
+        >
           <Image
             src='/images/footer-instagram-btn.png'
             alt='instagram-button'
             fill
           />
-        </div>
+        </button>
       </footer>
       {/* mobile menu */}
       <div

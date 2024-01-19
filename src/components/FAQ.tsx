@@ -14,17 +14,17 @@ export default function FAQ(props: FAQProps) {
   return (
     <div
       className={
-        `flex w-full max-w-[883px] flex-col gap-4 overflow-hidden rounded-[20px] bg-white bg-opacity-80 px-10 py-6 transition-all max-md:p-4` +
+        `flex w-full max-w-[883px] flex-col gap-4 overflow-hidden rounded-[15px] bg-white bg-opacity-80 px-6 py-4 transition-all max-md:p-4 md:rounded-[20px] md:px-10 md:py-6` +
         className
       }
       onClick={() => setIsAnswerOpen(!isAnswerOpen)}
     >
-      <div className='flex w-full items-center justify-between'>
+      <div className='flex w-full items-center justify-between gap-2'>
         <p className='text-[15px] font-bold leading-loose text-black md:text-xl md:leading-normal'>
           {'Q. ' + question}
         </p>
         <svg
-          className={`size-[20px] transform transition-transform duration-500 md:size-[30px] ${
+          className={`size-[20px] shrink-0 transform transition-transform duration-500 md:size-[30px] ${
             isAnswerOpen ? 'rotate-180' : ''
           }`}
           xmlns='http://www.w3.org/2000/svg'

@@ -151,13 +151,13 @@ export default function ApplyPage() {
                 content={`${recruitingTooltipText} ${remainingDaysText} 🦁`}
                 arrowPosition='bottom'
               />
-              <p className='text-[32px] font-bold leading-normal md:text-[54px]'>
+              <p className='text-balance text-center text-[28px] font-bold leading-normal md:text-[54px]'>
                 <span className='text-orange'>{`${currentYear}기 아기사자`}</span>{' '}
                 <span>{`${recruitingStatusText} 🔥`}</span>
               </p>
             </div>
             <div className='flex w-full flex-col items-center justify-between max-md:gap-[110px] md:flex-row'>
-              <p className='text-sm font-normal leading-relaxed max-md:text-center md:text-lg md:font-semibold'>
+              <p className='text-balance text-sm font-normal leading-relaxed max-md:text-center md:text-lg md:font-semibold'>
                 {
                   '멋사와 함께 성장할 열정 있는 12기 아기사자를 기다립니다!\n12기 서류 접수 기간 : 24.01.22~24.02.04'
                 }
