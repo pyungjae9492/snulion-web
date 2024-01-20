@@ -1,5 +1,6 @@
 import Button from '@/components/Button';
 import Section from '@/components/sections/Section';
+import { logEvent } from '@/utils/logHelper';
 import { getRecruitInfo } from '@/utils/recruitTimeHelpher';
 import { useRouter } from 'next/router';
 
@@ -17,6 +18,11 @@ export default function ApplyCTASection() {
       : `${currentYear + 1}기 모집 알림 받기`;
 
   const onClickApply = () => {
+    logEvent({
+      action: 'click',
+      category: 'apply_btn',
+      label: router.pathname.replace('/', '') + '_page',
+    });
     if (status === 'BEFORE_DOCUMENT_SUBMISSION') {
       alert('모집이 아직 시작되지 않았습니다, 모집 시작일까지 기다려주세요.');
     } else if (status === 'DOCUMENT_SUBMISSION') {

@@ -28,6 +28,7 @@
     "react-animated-numbers": "^0.17.1",
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.2",
+    "react-ga4": "^2.1.0",
     "react-icons": "^4.10.1",
     "react-intersection-observer": "^9.5.3",
     "react-slot-counter": "^2.2.3",

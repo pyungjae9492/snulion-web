@@ -24,6 +24,7 @@ import Tooltip from '@/components/Tooltip';
 import { Star } from 'lucide-react';
 import StarSky from '@/components/StarSky';
 import { getRecruitInfo } from '@/utils/recruitTimeHelpher';
+import { logEvent } from '@/utils/logHelper';
 
 /**
  * SVGR Support
@@ -90,6 +91,11 @@ export default function HomePage() {
       : `${currentYear + 1}기 모집 알림 받기`;
 
   const onClickApply = () => {
+    logEvent({
+      action: 'click',
+      category: 'apply_btn',
+      label: 'home_page',
+    });
     if (status === 'BEFORE_DOCUMENT_SUBMISSION') {
       alert('모집이 아직 시작되지 않았습니다, 모집 시작일까지 기다려주세요.');
     } else if (status === 'DOCUMENT_SUBMISSION') {
