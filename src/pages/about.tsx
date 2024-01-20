@@ -131,7 +131,7 @@ export default function AboutPage() {
             title='이전 기수 활동 둘러보기'
             description='인스타그램 카드뉴스를 통해 멋사에서 진행한 활동을 둘러보세요.'
           >
-            <div className='scrollbar-hide overflow-x-scroll max-md:w-[100vw] max-md:px-8'>
+            <div className='scrollbar-hide w-[100vw] overflow-x-scroll px-10 md:px-20'>
               <div className='flex w-fit items-center justify-center gap-8 overflow-x-auto'>
                 <div
                   className='relative size-[230px] cursor-pointer overflow-hidden rounded-lg md:size-[376px]'
@@ -158,7 +158,37 @@ export default function AboutPage() {
                 >
                   <Image
                     src='/images/about-cardnews-2.png'
-                    alt='about-cardnews-1'
+                    alt='about-cardnews-2'
+                    fill
+                    priority
+                  />
+                </div>
+                <div
+                  className='relative size-[230px] cursor-pointer overflow-hidden rounded-lg md:size-[376px]'
+                  onClick={() =>
+                    window.open(
+                      'https://www.instagram.com/p/C2M80HkL3g6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+                    )
+                  }
+                >
+                  <Image
+                    src='/images/about-cardnews-3.png'
+                    alt='about-cardnews-3'
+                    fill
+                    priority
+                  />
+                </div>
+                <div
+                  className='relative size-[230px] cursor-pointer overflow-hidden rounded-lg md:size-[376px]'
+                  onClick={() =>
+                    window.open(
+                      'https://www.instagram.com/p/C2SNYE-rfyn/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+                    )
+                  }
+                >
+                  <Image
+                    src='/images/about-cardnews-4.png'
+                    alt='about-cardnews-4'
                     fill
                     priority
                   />
