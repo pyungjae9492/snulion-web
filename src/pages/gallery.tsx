@@ -35,7 +35,7 @@ export default function PeoplePage() {
 
   return (
     <Layout>
-      <Seo templateTitle='Project' />
+      <Seo templateTitle='Gallery' />
       <section className='mt-20 flex h-fit w-full flex-col items-center gap-[60px] overflow-hidden'>
         <p className='text-[32px] font-bold leading-normal md:text-[46px]'>
           갤러리
