@@ -21,7 +21,7 @@ const recruitTimelineItems: RecruitTimelineItem[] = [
   {
     title: '개별 면접',
     color: 'white',
-    date: '2.16(금)~2.18(일)',
+    date: '2.15(목)~2.17(토)',
   },
   {
     title: '최종 합격자 발표',
