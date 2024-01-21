@@ -99,7 +99,11 @@ export default function HomePage() {
     if (status === 'BEFORE_DOCUMENT_SUBMISSION') {
       alert('모집이 아직 시작되지 않았습니다, 모집 시작일까지 기다려주세요.');
     } else if (status === 'DOCUMENT_SUBMISSION') {
-      router.push('/apply');
+      window.open(
+        'https://forms.gle/3XbAaPmM2NyFkXAt6',
+        '_blank',
+        'noopener noreferrer'
+      );
     } else if (status === 'INTERVIEW') {
       router.push('/apply');
     }
