@@ -99,11 +99,7 @@ export default function HomePage() {
     if (status === 'BEFORE_DOCUMENT_SUBMISSION') {
       alert('모집이 아직 시작되지 않았습니다, 모집 시작일까지 기다려주세요.');
     } else if (status === 'DOCUMENT_SUBMISSION') {
-      window.open(
-        'https://forms.gle/3XbAaPmM2NyFkXAt6',
-        '_blank',
-        'noopener noreferrer'
-      );
+      window.open('https://url.kr/dyofek', '_blank', 'noopener noreferrer');
     } else if (status === 'INTERVIEW') {
       router.push('/apply');
     }
