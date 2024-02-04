@@ -13,8 +13,10 @@ export default function ApplyCTASection() {
       ? `${currentYear}기 지원하기`
       : status === 'DOCUMENT_SUBMISSION'
       ? `${currentYear}기 지원하기`
+      : status === 'DOCUMENT_REVIEW'
+      ? '서류 검토 중'
       : status === 'INTERVIEW'
-      ? '면접 진행 중'
+      ? '서류 검토 중'
       : `${currentYear + 1}기 모집 알림 받기`;
 
   const onClickApply = () => {

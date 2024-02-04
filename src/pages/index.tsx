@@ -71,6 +71,8 @@ export default function HomePage() {
       ? '모집 시작까지'
       : status === 'DOCUMENT_SUBMISSION'
       ? '서류 마감까지'
+      : status === 'DOCUMENT_REVIEW'
+      ? '서류 검토까지'
       : status === 'INTERVIEW'
       ? '결과 발표까지'
       : '리크루팅 완료!';
@@ -86,8 +88,10 @@ export default function HomePage() {
       ? `${currentYear}기 지원하기`
       : status === 'DOCUMENT_SUBMISSION'
       ? `${currentYear}기 지원하기`
+      : status === 'DOCUMENT_REVIEW'
+      ? '서류 검토 중'
       : status === 'INTERVIEW'
-      ? '면접 진행 중'
+      ? '면접 평가 중'
       : `${currentYear + 1}기 모집 알림 받기`;
 
   const onClickApply = () => {
