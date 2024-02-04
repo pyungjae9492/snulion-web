@@ -26,7 +26,7 @@ export const getRecruitInfo = (): {
   if (now < RECRUIT_DOCUMENT_SUBMISSION_START_DATE) {
     return {
       currentYear: CURRENT_YEAR,
-      remainingDays: Math.ceil(
+      remainingDays: Math.floor(
         (RECRUIT_DOCUMENT_SUBMISSION_START_DATE.getTime() - now.getTime()) /
           (1000 * 3600 * 24)
       ),
@@ -37,7 +37,7 @@ export const getRecruitInfo = (): {
   if (now < RECRUIT_DOCUMENT_SUBMISSION_END_DATE) {
     return {
       currentYear: CURRENT_YEAR,
-      remainingDays: Math.ceil(
+      remainingDays: Math.floor(
         (RECRUIT_DOCUMENT_SUBMISSION_END_DATE.getTime() - now.getTime()) /
           (1000 * 3600 * 24)
       ),
@@ -48,7 +48,7 @@ export const getRecruitInfo = (): {
   if (now < RECRUIT_END_DATE) {
     return {
       currentYear: CURRENT_YEAR,
-      remainingDays: Math.ceil(
+      remainingDays: Math.floor(
         (RECRUIT_END_DATE.getTime() - now.getTime()) / (1000 * 3600 * 24)
       ),
       status: 'INTERVIEW',
